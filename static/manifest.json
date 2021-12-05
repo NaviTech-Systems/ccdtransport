@@ -1,0 +1,11 @@
+{
+  "name": "Svelte App",
+  "short_name": "Svelte App",
+  "theme_color": "#1c1c1c",
+  "background_color": "#1c1c1c",
+  "display": "standalone",
+  "Scope": "/",
+  "start_url": "/",
+  "splash_pages": null,
+  "icons": []
+}

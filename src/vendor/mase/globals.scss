@@ -1,0 +1,20 @@
+$primary-color: #c80000;
+$secondary-color: #0a66c2;
+$background: #f3f2ef;
+$background-secondary: #fff;
+$background-darker: #e5e5e5;
+$background-darker-secondary: #b5b5b5;
+$font-color: #00000099;
+$font-color-full: #2b2b2b;
+$font-color-on-color: #fff;
+$label-color: darken(
+	$color: $font-color,
+	$amount: 20
+);
+$link-color: rgb(57, 153, 255);
+$navbar-background: $background-secondary;
+$error-color: rgb(255, 38, 38);
+$spinner-color: #36b1b7;
+$border-color: #00000014;
+$width-small: 1200px;
+$breakpoint-phone: 1200px;

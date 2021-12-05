@@ -1,0 +1,45 @@
+{
+	"name": "svelte-app",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "svelte-kit dev --host",
+		"build": "svelte-kit build",
+		"preview": "svelte-kit preview  --host",
+		"lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore /src.",
+		"format": "prettier --write --plugin-search-dir=. ./src",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+		"generate": "plop --plopfile internal/generators/index.js",
+		"sw:create": "workbox generateSW ./workbox-config.js",
+		"db:migrate": "prisma migrate dev --schema ./src/backend/schema.prisma --name",
+		"db:format": "prisma format --schema ./src/backend/schema.prisma",
+		"db:generate": "prisma generate --schema ./src/backend/schema.prisma"
+	},
+	"devDependencies": {
+		"@danutu89/plop": "^0.3.0",
+		"@sveltejs/kit": "next",
+		"@typescript-eslint/eslint-plugin": "^4.33.0",
+		"@typescript-eslint/parser": "^4.33.0",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-svelte3": "^3.2.1",
+		"prettier": "~2.2.1",
+		"prettier-plugin-svelte": "^2.5.0",
+		"svelte": "^3.44.2",
+		"svelte-check": "^2.2.10",
+		"svelte-preprocess": "^4.9.8",
+		"tslib": "^2.3.1",
+		"typescript": "^4.5.2"
+	},
+	"type": "module",
+	"dependencies": {
+		"@prisma/client": "^3.6.0",
+		"@sveltejs/adapter-node": "^1.0.0-next.55",
+		"esbuild": "^0.12.29",
+		"node-sass": "^6.0.1",
+		"pg": "^8.7.1",
+		"prisma": "3.6.0",
+		"sass": "^1.44.0",
+		"workbox-cli": "^6.4.2"
+	}
+}

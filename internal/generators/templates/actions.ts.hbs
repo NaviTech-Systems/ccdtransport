@@ -1,0 +1,21 @@
+import { GET_{{ upperCase name }}, GOT_{{ upperCase name }}, GET_{{ upperCase name }}_FAILED } from '$constants/{{ lowerCase name }}';
+import type {
+	Get{{ properCase name }},
+  Got{{ properCase name }},
+  Get{{ properCase name }}Failed,
+  Error
+} from '$types/{{ lowerCase name }}/actions';
+import type { ActionWithPayload } from '$vendor/sedux/types/slicer';
+
+export const get{{ properCase name }} = (): ActionWithPayload<Get{{ properCase name }}> => ({
+    type: GET_{{ upperCase name }},
+})
+
+export const got{{ properCase name }} = (): ActionWithPayload<Got{{ properCase name }}> => ({
+    type: GOT_{{ upperCase name }},
+})
+
+export const get{{ properCase name }}Failed = (error: Error): ActionWithPayload<Get{{ properCase name }}Failed> => ({
+    type: GET_{{ upperCase name }}_FAILED,
+    payload: { error }
+})

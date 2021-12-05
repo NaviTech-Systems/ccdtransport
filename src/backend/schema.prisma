@@ -1,0 +1,50 @@
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:@localhost/company"
+}
+
+generator client {
+
+  provider = "prisma-client-js"
+
+}
+
+
+
+model Contact {
+  id String @id @default(dbgenerated("public.uuid_generate_v4()"))
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+
+  name String
+
+  email String
+
+  message String
+
+  read Boolean @default(false)
+}
+
+model Offer {
+  	id String @id @default(dbgenerated("public.uuid_generate_v4()"))
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @default(now())
+    company String
+    address String
+    contactPerson String
+    phone String
+    email String
+    message String
+    function String
+    cargoDescription String
+    startAdress String
+    endAdress String
+    transportTimeEstimated String
+    lentgh String
+    width String
+    height String
+    startDate String
+
+}

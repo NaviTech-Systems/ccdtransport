@@ -1,0 +1,20 @@
+
+export interface Get{{ properCase name }} {
+    name: string;
+}
+
+export interface Got{{ properCase name }} {
+    name: string;
+}
+
+export interface Get{{ properCase name }}Failed {
+    error: {
+		status: number;
+		message: string;
+	};
+}
+
+export interface Error {
+	status: number;
+	message: string;
+}

@@ -1,0 +1,31 @@
+@font-face {
+	font-family: Roboto;
+	src: url('/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+	font-family: RobotoMedium;
+	src: url('/fonts/Roboto-Medium.ttf');
+}
+
+@font-face {
+	font-family: RobotoLight;
+	src: url('/fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+	font-family: RobotoBold;
+	src: url('/fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+	font-family: RobotoThin;
+	src: url('/fonts/Roboto-Thin.ttf');
+}
+
+:root {
+	font-family: -apple-system, 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+		sans-serif;
+}
+
+$background: #f3f2ef;

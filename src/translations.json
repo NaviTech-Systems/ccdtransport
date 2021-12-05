@@ -1,0 +1,473 @@
+{
+	"en": {
+		"navbar": {
+			"signup": "Register",
+			"login": "Login",
+			"logout": "Logout",
+			"projects": "Projects",
+			"profile": "Profile"
+		},
+		"registerModal": {
+			"title": "Register",
+			"username": "username",
+			"email": "email",
+			"firstName": "first name",
+			"lastName": "last name",
+			"password": "password",
+			"retypePassword": "retype password"
+		},
+		"loginModal": {
+			"title": "Login",
+			"username": "username",
+			"password": "password"
+		},
+		"issueModal": {
+			"description": "Description",
+			"status": "Status",
+			"delete": "Delete",
+			"start": "Start",
+			"end": "End",
+			"reporter": "Reporter",
+			"asignee": "Assignee",
+			"edit": "Edit",
+			"team": "Team",
+			"priority": "Priority",
+			"subIssues": "Sub Issues",
+			"progress": "Progress"
+		},
+		"newProjectModal": {
+			"title": "New Project",
+			"name": "name",
+			"shortName": "short name"
+		},
+		"createIssueCard": {
+			"title": "title"
+		},
+		"roadmapIssues": {
+			"title": "Issues"
+		},
+		"sidebar": {
+			"issues": "Issues",
+			"roadmap": "Roadmap",
+			"settings": "Settings",
+			"teams": "Teams"
+		},
+		"userSelect": {
+			"search": "Search"
+		},
+		"issues": {
+			"title": "Issues"
+		},
+		"roadmap": {
+			"title": "Roadmap",
+			"status": "Status",
+			"month": "Month",
+			"day": "Day"
+		},
+		"settings": {
+			"title": "Settings",
+			"name": "name",
+			"nameUpper": "Name",
+			"shortName": "short name",
+			"shortNameUpper": "Short Name",
+			"boss": "boss",
+			"bossUpper": "Boss",
+			"add": "Add",
+			"save": "Save",
+			"delete": "Delete",
+			"general": "General",
+			"statuses": "Statuses",
+			"teams": "Teams"
+		},
+		"projects": {
+			"title": "Projects",
+			"asigned": "Asigned",
+			"reported": "Reported",
+			"newProject": "New Project",
+			"issues": "Issues"
+		},
+		"profile": {
+			"projects": "Projects",
+			"activity": "Activity",
+			"recent": "Recently Worked On",
+			"edit": "Edit"
+		},
+		"teams": {
+			"title": "Teams"
+		},
+		"priorities": {
+			"high": "High",
+			"highest": "Higher",
+			"medium": "Medium",
+			"low": "Low",
+			"lowest": "Lower"
+		},
+		"issueCard": {
+			"subIssues": "Sub Issues"
+		},
+		"profileSettings": {
+			"title": "Settings",
+			"general": "General",
+			"security": "Security",
+			"firstName": "First Name",
+			"lastName": "Last Name",
+			"department": "Department",
+			"job": "Job",
+			"company": "Company",
+			"save": "Save"
+		}
+	},
+	"ro": {
+		"navbar": {
+			"signup": "Registrare",
+			"login": "Logare",
+			"logout": "Delogare",
+			"projects": "Proiecte",
+			"profile": "Profil"
+		},
+		"registerModal": {
+			"title": "Registrare",
+			"username": "nume utilizator",
+			"email": "e-mail",
+			"firstName": "prenume",
+			"lastName": "nume",
+			"password": "parol\u0103",
+			"retypePassword": "parol\u0103 de retip"
+		},
+		"loginModal": {
+			"title": "Logare",
+			"username": "nume utilizator",
+			"password": "parol\u0103"
+		},
+		"issueModal": {
+			"description": "Descriere",
+			"status": "Stare",
+			"delete": "\u015etergere",
+			"start": "Pornire",
+			"end": "Sf\u00e2r\u015fit",
+			"reporter": "Reporter",
+			"asignee": "Cesionar",
+			"edit": "Modifica",
+			"team": "Echipa",
+			"priority": "Prioritate",
+			"subIssues": "Sub Probleme",
+			"progress": "Progres"
+		},
+		"newProjectModal": {
+			"title": "Proiect nou",
+			"name": "nume",
+			"shortName": "nume scurt"
+		},
+		"createIssueCard": {
+			"title": "titlu"
+		},
+		"roadmapIssues": {
+			"title": "Probleme"
+		},
+		"sidebar": {
+			"issues": "Probleme",
+			"roadmap": "Hart\u0103",
+			"settings": "Set\u0103ri",
+			"teams": "Echipe"
+		},
+		"userSelect": {
+			"search": "C\u0103utare"
+		},
+		"issues": {
+			"title": "Probleme"
+		},
+		"roadmap": {
+			"title": "Hart\u0103",
+			"status": "Stare",
+			"month": "Lun\u0103",
+			"day": "Zi"
+		},
+		"settings": {
+			"title": "Set\u0103ri",
+			"name": "nume",
+			"nameUpper": "Nume",
+			"shortName": "nume scurt",
+			"shortNameUpper": "Nume scurt",
+			"boss": "\u015fef",
+			"bossUpper": "Seful",
+			"add": "Ad\u0103ugare",
+			"save": "Salvare",
+			"delete": "\u015etergere",
+			"general": "General",
+			"statuses": "Stări",
+			"teams": "Echipe"
+		},
+		"projects": {
+			"title": "Proiecte",
+			"asigned": "Asemnat",
+			"reported": "Raportat",
+			"newProject": "Proiect nou",
+			"issues": "Probleme",
+			"edit": "Modifica"
+		},
+		"profile": {
+			"projects": "Proiecte",
+			"activity": "Activitate",
+			"recent": "Lucrari Recente",
+			"edit": "Modifica"
+		},
+		"teams": {
+			"title": "Echipe"
+		},
+		"priorities": {
+			"high": "Mare",
+			"highest": "Foarte Mare",
+			"medium": "Medie",
+			"low": "Mica",
+			"lowest": "Foarte Mica"
+		},
+		"issueCard": {
+			"subIssues": "Sub Probleme"
+		},
+		"profileSettings": {
+			"title": "Setari",
+			"general": "General",
+			"security": "Securitate",
+			"department": "Department",
+			"firstName": "Prenume",
+			"lastName": "Nume",
+			"job": "Job",
+			"company": "Companie",
+			"save": "Salvare"
+		}
+	},
+	"de": {
+		"navbar": {
+			"signup": "Registrieren",
+			"login": "Anmeldung",
+			"logout": "Abmeldung",
+			"projects": "Projekte",
+			"profile": "Profil"
+		},
+		"registerModal": {
+			"title": "Registrieren",
+			"username": "Benutzername",
+			"email": "E-Mail",
+			"firstName": "Vorname",
+			"lastName": "Nachname",
+			"password": "Kennwort",
+			"retypePassword": "Kennwort erneut eingeben"
+		},
+		"loginModal": {
+			"title": "Anmeldung",
+			"username": "Benutzername",
+			"password": "Kennwort"
+		},
+		"issueModal": {
+			"description": "Beschreibung",
+			"status": "Status",
+			"delete": "L\u00f6schen",
+			"start": "Start",
+			"end": "Ende",
+			"reporter": "Reporter",
+			"asignee": "Empf\u00e4nger",
+			"edit": "Bearbeiten",
+			"team": "Mannschaft",
+			"priority": "Priority",
+			"subIssues": "Sub Issues",
+			"progress": "Progress"
+		},
+		"newProjectModal": {
+			"title": "Neues Projekt",
+			"name": "Name",
+			"shortName": "Kurzname"
+		},
+		"createIssueCard": {
+			"title": "Titel"
+		},
+		"roadmapIssues": {
+			"title": "Probleme"
+		},
+		"sidebar": {
+			"issues": "Probleme",
+			"roadmap": "Roadmap",
+			"settings": "Einstellungen"
+		},
+		"userSelect": {
+			"search": "Suchen"
+		},
+		"issues": {
+			"title": "Probleme"
+		},
+		"roadmap": {
+			"title": "Roadmap",
+			"status": "Status",
+			"month": "Monat",
+			"day": "Tag"
+		},
+		"settings": {
+			"title": "Einstellungen",
+			"name": "Name",
+			"nameUpper": "Name",
+			"shortName": "Kurzname",
+			"shortNameUpper": "Kurzname",
+			"boss": "Vorsitzender",
+			"bossUpper": "Vorsitzender",
+			"add": "Hinzuf\u00fcgen",
+			"save": "Speichern",
+			"delete": "L\u00f6schen",
+			"general": "Allgemeines",
+			"statuses": "Status"
+		},
+		"projects": {
+			"title": "Projekte",
+			"asigned": "Asigniert",
+			"reported": "Gemeldet",
+			"newProject": "Neues Projekt",
+			"issues": "Probleme"
+		},
+		"profile": {
+			"projects": "Projekte",
+			"activity": "Aktivität",
+			"recent": "Aktuelle Arbeiten",
+			"edit": "Edit"
+		},
+		"teams": {
+			"title": "Mannschaft"
+		},
+		"priorities": {
+			"high": "High",
+			"highest": "Higher",
+			"medium": "Medium",
+			"low": "Low",
+			"lowest": "Lower"
+		},
+		"issueCard": {
+			"subIssues": "Sub Issues"
+		},
+		"profileSettings": {
+			"title": "Settings",
+			"general": "General",
+			"security": "Security",
+			"department": "Department",
+			"firstName": "Vorname",
+			"lastName": "Nachname",
+			"job": "Job",
+			"company": "Company",
+			"save": "Save"
+		}
+	},
+	"it": {
+		"navbar": {
+			"signup": "Registrati",
+			"login": "Login",
+			"logout": "Logout",
+			"projects": "Progetti",
+			"profile": "Profilo"
+		},
+		"registerModal": {
+			"title": "Registrati",
+			"username": "username",
+			"email": "email",
+			"firstName": "nome primo",
+			"lastName": "cognome",
+			"password": "password",
+			"retypePassword": "reinserisci password"
+		},
+		"loginModal": {
+			"title": "Login",
+			"username": "username",
+			"password": "password"
+		},
+		"issueModal": {
+			"description": "Descrizione",
+			"status": "Stato",
+			"delete": "Elimina",
+			"start": "Inizio",
+			"end": "Fine",
+			"reporter": "Reporter",
+			"asignee": "Cesionar",
+			"edit": "Modifica",
+			"team": "Squadra",
+			"priority": "Priorita",
+			"subIssues": "Sotto Problemi",
+			"progress": "Progresso"
+		},
+		"newProjectModal": {
+			"title": "Nuovo progetto",
+			"name": "nome",
+			"shortName": "nome breve"
+		},
+		"createIssueCard": {
+			"title": "titolo"
+		},
+		"roadmapIssues": {
+			"title": "Problematiche"
+		},
+		"sidebar": {
+			"issues": "Problematiche",
+			"roadmap": "Roadmap",
+			"settings": "Impostazioni",
+			"teams": "Squadre"
+		},
+		"userSelect": {
+			"search": "Ricerca"
+		},
+		"issues": {
+			"title": "Problematiche"
+		},
+		"roadmap": {
+			"title": "Roadmap",
+			"status": "Stato",
+			"month": "Mese",
+			"day": "Giorno"
+		},
+		"settings": {
+			"title": "Impostazioni",
+			"name": "nome",
+			"nameUpper": "Nome",
+			"shortName": "nome breve",
+			"shortNameUpper": "Nome breve",
+			"boss": "capo",
+			"bossUpper": "Capo",
+			"add": "Aggiungi",
+			"save": "Salva",
+			"delete": "Elimina",
+			"general": "Generale",
+			"statuses": "Stati",
+			"teams": "Squadre"
+		},
+		"projects": {
+			"title": "Progetti",
+			"asigned": "Afirmato",
+			"reported": "Segnalato",
+			"newProject": "Nuovo progetto",
+			"issues": "Problematiche"
+		},
+		"profile": {
+			"projects": "Progetti",
+			"activity": "Attivita",
+			"recent": "Lavoro Recente",
+			"edit": "Modifica"
+		},
+		"teams": {
+			"title": "Squadre"
+		},
+		"priorities": {
+			"high": "Grande",
+			"highest": "Molto Grande",
+			"medium": "Media",
+			"low": "Piccola",
+			"lowest": "Molto Piccola"
+		},
+		"issueCard": {
+			"subIssues": "Sotto Problemi"
+		},
+		"profileSettings": {
+			"title": "Impostazioni",
+			"general": "Generale",
+			"security": "Securita",
+			"department": "Dipartmento",
+			"firstName": "Nome Primo",
+			"lastName": "cognome",
+			"job": "Job",
+			"company": "Azienda",
+			"save": "Salva"
+		}
+	}
+}

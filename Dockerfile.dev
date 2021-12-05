@@ -1,0 +1,13 @@
+FROM node:14
+
+RUN mkdir /frontend
+WORKDIR /frontend
+
+ADD . /frontend/
+
+RUN npm i
+
+EXPOSE ${PORT}
+EXPOSE 3001
+
+CMD npm run dev --host

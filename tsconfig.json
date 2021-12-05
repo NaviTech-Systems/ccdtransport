@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "es2020",
+    "lib": ["es2020"],
+    "target": "es2017",
+    /*Code Quality*/
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    /**
+			svelte-preprocess cannot figure out whether you have a value or a type, so tell TypeScript
+			to enforce using \`import type\` instead of \`import\` for Types.
+			*/
+    "importsNotUsedAsValues": "error",
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    /**
+			To have warnings/errors of the Svelte compiler at the correct position,
+			enable source maps by default.
+			*/
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "allowJs": true,
+    "checkJs": true,
+    "paths": {
+      "$components/*": ["src/frontend/components/*"],
+      "$actions/*": ["src/frontend/actions/*"],
+      "$constants/*": ["src/frontend/constants/*"],
+      "$state/*": ["src/frontend/state/*"],
+      "$reducers/*": ["src/frontend/reducers/*"],
+      "$interceptors/*": ["src/frontend/interceptors/*"],
+      "$vendor/*": ["src/vendor/*"],
+      "$frontend/*": ["src/frontend/*"],
+      "$backend/*": ["src/backend/*"],
+      "$modules/*": ["src/backend/modules/*"],
+      "$models/*": ["src/backend/models/*"],
+      "$controllers/*": ["src/backend/controllers/*"],
+      "$utils/*": ["src/utils/*"],
+      "$app/*": ["node_modules/@sveltejs/kit/assets/runtime/app/*"]
+    }
+  },
+  "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]
+}

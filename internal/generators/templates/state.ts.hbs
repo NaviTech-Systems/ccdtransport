@@ -1,0 +1,11 @@
+import { storex } from '$vendor/sedux';
+import type { State } from '$types/{{ lowerCase name }}';
+
+
+export const initialState = {
+    results: [],
+    state: 'idle',
+    error: '',
+} as State;
+
+export const {{lowerCase name}}Store = storex(initialState);

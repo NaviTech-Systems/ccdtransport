@@ -1,0 +1,26 @@
+import {
+  GET_{{ upperCase name }},
+  GOT_{{ upperCase name }},
+  GET_{{ upperCase name }}_FAILED,
+} from '$constants/{{ lowerCase name }}';
+import type { State } from "$types/{{ lowerCase name }}";
+import type { Action } from "$vendor/sedux/types/action";
+
+export const {{ lowerCase name }}Reducer = (action: Action, state: State): State => {
+  const draft = state;
+  switch (action.type) {
+    case GET_{{ upperCase name }}:
+      draft.state = 'loading';
+      draft.error = '';
+      break;
+    case GOT_{{ upperCase name }}:
+      draft.state = 'completed';
+      draft.results = action.results;
+      break;
+    case GET_{{ upperCase name }}_FAILED:
+      draft.state = 'failed';
+      draft.error = action.error;
+      break;
+  }
+  return draft;
+};
