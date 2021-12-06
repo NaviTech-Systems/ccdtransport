@@ -48,7 +48,6 @@
 		</Group>
 	</svelte:fragment>
 	<svelte:fragment slot="mobile">
-		<Item><Switcher /></Item>
 		<Item effect link to="/" selected={$page.path === '/'}>{$t('navbar.home')}</Item>
 		<Item effect link to="/offer" selected={$page.path === '/offer'}>{$t('navbar.offer')}</Item>
 		<Item effect link to="/contact" selected={$page.path === '/contact'}

@@ -28,11 +28,11 @@
 <nav>
 	<container class:mini>
 		<MediaQuery query="(min-width: 1200px)" let:matches>
-			{#if matches}
+			{#if matches === true}
 				<slot name="desktop" />
 			{:else}
 				<MediaQuery query="(max-width: 800px)" let:matches>
-					{#if matches}
+					{#if matches === true}
 						<slot name="logo" />
 						{#if opened}
 							<div class="dropdown" bind:this={dropdownEl} transition:slide>
@@ -49,7 +49,7 @@
 								</div>
 							</Item>
 						</Group>
-					{:else}
+					{:else if matches === false}
 						<slot name="tablet" />
 					{/if}
 				</MediaQuery>

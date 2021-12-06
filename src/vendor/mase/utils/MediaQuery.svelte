@@ -5,28 +5,22 @@
 
 	let mql: MediaQueryList;
 	let mqlListener: (v: any) => boolean;
-	let wasMounted = false;
-	let matches = false;
+	let matches = null;
 
 	onMount(() => {
-		wasMounted = true;
+		removeActiveListener();
+		addNewListener(query);
 		return () => {
 			removeActiveListener();
 		};
 	});
 
-	$: {
-		if (wasMounted) {
-			removeActiveListener();
-			addNewListener(query);
-		}
-	}
-
 	function addNewListener(query: string): void {
 		mql = window.matchMedia(query);
+		matches = mql.matches;
+
 		mqlListener = (v) => (matches = v.matches);
 		mql.addEventListener('change', mqlListener);
-		matches = mql.matches;
 	}
 
 	function removeActiveListener(): void {
