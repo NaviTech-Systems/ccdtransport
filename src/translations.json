@@ -1,5 +1,13 @@
 {
 	"ro": {
+		"navbar": {
+			"home": "Acasă",
+			"offer": "Cerere Ofertă",
+			"contact": "Contact",
+			"mobileHouses": "Casă Mobila",
+			"machineries": "Utilaje",
+			"cargo": "Marfa Industriala"
+		},
 		"homepage": {
 			"title": "CCD EuroServices",
 			"subtitle": "Transport utilaje si case mobile"
@@ -36,10 +44,45 @@
 		},
 		"footer": {
 			"title": "About Us",
-			"description": ""
+			"description": "",
+			"contact": "Contact",
+			"informations": "Informatii",
+			"importantLinks": "Linkuri Importante"
+		},
+		"contact": {
+			"name": "Nume si Prenume",
+			"email": "Email",
+			"message": "Mesaj",
+			"submit": "Trimite"
+		},
+		"createOffer": {
+			"personDetails": "Detalii Persoana",
+			"transportDetails": "Detalii Transport",
+			"name": "Nume si Prenume",
+			"address": "Adresa",
+			"phone": "Nr. Telefon",
+			"email": "Email",
+			"message": "Mesaj",
+			"submit": "Trimite",
+			"cargoDescription": "Descriere marfa",
+			"startAddress": "Adresa de plecare",
+			"endAddress": "Adresa de sosire",
+			"lenght": "Lungime (m)",
+			"width": "Latime (m)",
+			"height": "Inaltime (m)",
+			"date": "Data",
+			"transportTimeEstimated": "Timp estimat de transport"
 		}
 	},
 	"en": {
+		"navbar": {
+			"home": "Home",
+			"offer": "Get an offer",
+			"contact": "Contact",
+			"mobileHouses": "Mobile houses",
+			"machineries": "Machineries",
+			"cargo": "Cargo"
+		},
 		"homepage": {
 			"title": "CCD EuroServices",
 			"subtitle": "Transport of equipment and mobile homes"
@@ -76,7 +119,34 @@
 		},
 		"footer": {
 			"title": "About Us",
-			"description": ""
+			"description": "",
+			"contact": "Contact",
+			"informations": "Informations",
+			"importantLinks": "Important Links"
+		},
+		"contact": {
+			"name": "Name and Surname",
+			"email": "Email",
+			"submit": "Send",
+			"message": "Message"
+		},
+		"createOffer": {
+			"personDetails": "Person Details",
+			"transportDetails": "Transport Details",
+			"name": "Name and Surname",
+			"address": "Adress",
+			"phone": "Phone Number",
+			"email": "Email",
+			"message": "Message",
+			"submit": "Send",
+			"cargoDescription": "Cargo Description",
+			"startAddress": "Start Adress",
+			"endAddress": "End Adress",
+			"lenght": "Lenght (m)",
+			"width": "Width (m)",
+			"height": "Height (m)",
+			"date": "Date",
+			"transportTimeEstimated": "Transport Time Estimated"
 		}
 	}
 }

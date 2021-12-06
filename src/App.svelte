@@ -7,7 +7,7 @@
 </script>
 
 <Sedux>
-	<I18n {translations} url="">
+	<I18n {translations} url="https://cddeuroservices.ro/">
 		{#if !$navigating}
 			<slot />
 		{:else}

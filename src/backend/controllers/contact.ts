@@ -1,5 +1,6 @@
 import { db } from '$backend/index';
 import type { Contact, Create } from '$backend/models/contact';
+import { notifyContact } from '$backend/modules/mail';
 import type { RequestHandler } from '$backend/types/request';
 
 export const getContacts: RequestHandler = async () => {
@@ -43,6 +44,8 @@ export const createContact: RequestHandler<Create> = async (data) => {
 			}
 		})
 		.then((_) => _[0]);
+
+	notifyContact(contact);
 
 	return {
 		status: 200,

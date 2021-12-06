@@ -1,12 +1,10 @@
 export interface Offer {
 	id: string;
-	company: string;
 	address: string;
-	contactPerson: string;
+	firstLastName: string;
 	phone: string;
 	email: string;
 	message: string;
-	function: string;
 	cargoDescription: string;
 	startAdress: string;
 	endAdress: string;
@@ -24,13 +22,11 @@ export interface Connect {
 }
 
 export interface Create {
-	company: string;
 	address: string;
-	contactPerson: string;
+	firstLastName: string;
 	phone: string;
 	email: string;
 	message: string;
-	function: string;
 	cargoDescription: string;
 	startAdress: string;
 	endAdress: string;

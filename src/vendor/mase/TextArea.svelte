@@ -3,7 +3,7 @@
 		value = '',
 		placeholder = '',
 		style = '',
-		label = '',
+		label: any = '',
 		bigLabel = false;
 </script>
 

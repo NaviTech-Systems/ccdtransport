@@ -31,20 +31,18 @@ model Offer {
 
     createdAt DateTime @default(now())
     updatedAt DateTime @default(now())
-    company String
-    address String
-    contactPerson String
-    phone String
-    email String
-    message String
-    function String
-    cargoDescription String
-    startAdress String
-    endAdress String
-    transportTimeEstimated String
-    lentgh String
-    width String
-    height String
-    startDate String
+    address String @default("")
+    firstLastName String @default("")
+    phone String @default("")
+    email String @default("")
+    message String @default("")
+    cargoDescription String @default("")
+    startAdress String @default("")
+    endAdress String @default("")
+    transportTimeEstimated String @default("")
+    lentgh String @default("")
+    width String @default("")
+    height String @default("")
+    startDate String @default("")
 
 }

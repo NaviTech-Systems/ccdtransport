@@ -47,9 +47,14 @@
 
 			languages.subscribe((value) => {
 				completeLoad = loaded && value.locales !== null;
+				if (value.locale) localStorage.setItem('i18n', value.locale);
 			});
 
-			slicer.dispatch(() => loadLanguages(translations, locale.slice(0, 2)));
+			if (localStorage.getItem('i18n')) {
+				slicer.dispatch(() => loadLanguages(translations, localStorage.getItem('i18n')));
+			} else {
+				slicer.dispatch(() => loadLanguages(translations, locale.slice(0, 2)));
+			}
 
 			addListener(CHANGE_LANGUAGE, handleChangeLocale);
 		}

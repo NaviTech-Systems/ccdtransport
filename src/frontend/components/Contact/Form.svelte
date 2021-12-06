@@ -9,6 +9,7 @@
 	import { contactInterceptor } from '$interceptors/contact';
 	import { sendMessage } from '$actions/contact';
 	import { onDestroy } from 'svelte';
+	import { t } from '$vendor/i18n/state';
 
 	const slicer = createSlicer(contactInterceptor, contactReducer, 'contact', contactStore);
 	const state = selectContactState;
@@ -42,9 +43,15 @@
 </script>
 
 <div class="form">
-	<Input label="Name" bigLabel bind:value={message.name} notEmpty bind:error={errors.name} />
 	<Input
-		label="Email"
+		label={$t('contact.name')}
+		bigLabel
+		bind:value={message.name}
+		notEmpty
+		bind:error={errors.name}
+	/>
+	<Input
+		label={$t('contact.email')}
 		bigLabel
 		bind:value={message.email}
 		notEmpty
@@ -53,13 +60,13 @@
 		)}
 		bind:error={errors.email}
 	/>
-	<TextArea label="Message" bigLabel rows={8} bind:value={message.message} />
+	<TextArea label={$t('contact.message')} bigLabel rows={8} bind:value={message.message} />
 	<div class="actions">
 		<Button
 			color="primary"
 			on:click={handleSubmit}
 			loading={$state.state === 'loading'}
-			error={$state.state === 'failed'}>Submit</Button
+			error={$state.state === 'failed'}>{$t('contact.submit')}</Button
 		>
 	</div>
 </div>

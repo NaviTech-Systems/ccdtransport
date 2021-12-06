@@ -2,13 +2,13 @@
 	import { createEventDispatcher } from 'svelte';
 
 	export let value: any = '',
-		name = '',
+		name: any = '',
 		placeholder = '',
 		defaultValue = '',
 		autofocus = false,
 		type: 'text' | 'password' | '_number' | 'date' = 'text',
 		maxlength = 100,
-		label = '',
+		label: any = '',
 		pattern: RegExp | null = null,
 		error: string | boolean = false,
 		mirrors: string | null = null,

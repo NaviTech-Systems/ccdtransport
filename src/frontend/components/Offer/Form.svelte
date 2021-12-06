@@ -9,6 +9,7 @@
 	import { offersStore, selectOffer } from '$state/offers';
 	import { sendOffer } from '$actions/offers';
 	import { onDestroy } from 'svelte';
+	import { t } from '$vendor/i18n/state';
 
 	const slicer = createSlicer(offersInterceptor, offersReducer, 'offers', offersStore);
 	const state = selectOffer;
@@ -34,13 +35,11 @@
 	};
 
 	const message = {
-		company: '',
 		address: '',
-		contactPerson: '',
+		firstLastNAme: '',
 		phone: '',
 		email: '',
 		message: '',
-		function: '',
 		cargoDescription: '',
 		startAdress: '',
 		endAdress: '',
@@ -68,38 +67,24 @@
 
 <div class="form">
 	<div class="col">
-		<h2>Dettali Companie</h2>
+		<h2>{$t('createOffer.personDetails')}</h2>
 		<Input
-			label="Company"
+			label={$t('createOffer.name')}
 			bigLabel
-			bind:value={message.company}
+			bind:value={message.firstLastNAme}
 			notEmpty
-			bind:error={errors.company}
+			bind:error={errors.contactPerson}
 		/>
 
 		<Input
-			label="Address"
+			label={$t('createOffer.address')}
 			bigLabel
 			bind:value={message.address}
 			notEmpty
 			bind:error={errors.address}
 		/>
 		<Input
-			label="Contact Person"
-			bigLabel
-			bind:value={message.contactPerson}
-			notEmpty
-			bind:error={errors.contactPerson}
-		/>
-		<Input
-			label="Function"
-			bigLabel
-			bind:value={message.function}
-			notEmpty
-			bind:error={errors.function}
-		/>
-		<Input
-			label="Phone"
+			label={$t('createOffer.phone')}
 			bigLabel
 			bind:value={message.phone}
 			notEmpty
@@ -107,7 +92,7 @@
 			pattern={new RegExp(/([0-9])+/)}
 		/>
 		<Input
-			label="Email"
+			label={$t('createOffer.email')}
 			bigLabel
 			bind:value={message.email}
 			notEmpty
@@ -116,56 +101,62 @@
 			)}
 			bind:error={errors.email}
 		/>
-		<TextArea label="Message" bigLabel rows={8} bind:value={message.message} />
+		<TextArea label={$t('createOffer.message')} bigLabel rows={8} bind:value={message.message} />
 	</div>
 	<div class="col">
-		<h2>Dettali Transport</h2>
+		<h2>{$t('createOffer.transportDetails')}</h2>
 
 		<Input
-			label="Cargo Description"
+			label={$t('createOffer.cargoDescription')}
 			bigLabel
 			bind:value={message.cargoDescription}
 			notEmpty
 			bind:error={errors.cargoDescription}
 		/>
 		<Input
-			label="Start Address"
+			label={$t('createOffer.startAddress')}
 			bigLabel
 			bind:value={message.startAdress}
 			notEmpty
 			bind:error={errors.startAdress}
 		/>
 		<Input
-			label="End Address"
+			label={$t('createOffer.endAddress')}
 			bigLabel
 			bind:value={message.endAdress}
 			notEmpty
 			bind:error={errors.endAdress}
 		/>
 		<Input
-			label="Transport Time Estimated"
+			label={$t('createOffer.transportTimeEstimated')}
 			bigLabel
 			bind:value={message.transportTimeEstimated}
 			notEmpty
 			bind:error={errors.transportTimeEstimated}
 		/>
 		<Input
-			label="Length"
+			label={$t('createOffer.lenght')}
 			bigLabel
 			bind:value={message.lentgh}
 			notEmpty
 			bind:error={errors.lentgh}
 		/>
-		<Input label="Width" bigLabel bind:value={message.width} notEmpty bind:error={errors.width} />
 		<Input
-			label="Height"
+			label={$t('createOffer.width')}
+			bigLabel
+			bind:value={message.width}
+			notEmpty
+			bind:error={errors.width}
+		/>
+		<Input
+			label={$t('createOffer.height')}
 			bigLabel
 			bind:value={message.height}
 			notEmpty
 			bind:error={errors.height}
 		/>
 		<Input
-			label="Date"
+			label={$t('createOffer.date')}
 			type="date"
 			bigLabel
 			bind:value={message.startDate}
@@ -177,7 +168,7 @@
 				color="primary"
 				on:click={handleSubmit}
 				loading={$state.state === 'loading'}
-				error={$state.state === 'failed'}>Submit</Button
+				error={$state.state === 'failed'}>{$t('createOffer.submit')}</Button
 			>
 		</div>
 	</div>

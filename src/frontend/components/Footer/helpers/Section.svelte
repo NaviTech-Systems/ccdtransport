@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let title: string;
+	export let title: any = '';
 </script>
 
 <div class="main">

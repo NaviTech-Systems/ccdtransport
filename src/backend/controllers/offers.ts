@@ -1,5 +1,6 @@
 import { db } from '$backend/index';
 import type { Offer, Create } from '$backend/models/offer';
+import { notifyOffer } from '$backend/modules/mail';
 import type { RequestHandler } from '$backend/types/request';
 
 export const getOffers: RequestHandler = async () => {
@@ -37,6 +38,8 @@ export const createOffer: RequestHandler<Create> = async (data) => {
 			}
 		})
 		.then((_) => _[0]);
+
+	notifyOffer(offer);
 
 	return {
 		status: 200,
