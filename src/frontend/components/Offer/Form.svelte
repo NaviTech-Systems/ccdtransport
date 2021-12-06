@@ -8,6 +8,7 @@
 	import { offersReducer } from '$reducers/offers';
 	import { offersStore, selectOffer } from '$state/offers';
 	import { sendOffer } from '$actions/offers';
+	import { onDestroy } from 'svelte';
 
 	const slicer = createSlicer(offersInterceptor, offersReducer, 'offers', offersStore);
 	const state = selectOffer;
@@ -59,6 +60,10 @@
 		if (Object.entries(errors).some(([_, item]) => item)) return;
 		doRecaptcha();
 	};
+
+	onDestroy(() => {
+		slicer.destroy();
+	});
 </script>
 
 <div class="form">

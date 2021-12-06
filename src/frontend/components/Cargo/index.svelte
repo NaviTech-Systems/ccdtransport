@@ -1,7 +1,9 @@
-<script>
+<script lang="ts">
 	import SlideShow from '$vendor/mase/SlideShow';
 	import Banner from '$components/Banner/index.svelte';
 	import Description from '$components/Description/index.svelte';
+	import { t } from '$vendor/i18n/state';
+	import { onDestroy } from 'svelte';
 
 	const sliderData = [
 		{
@@ -20,8 +22,16 @@
 			selected: false
 		}
 	];
+
+	let cargoEl: HTMLElement;
+
+	onDestroy(() => {
+		if (cargoEl) cargoEl.innerHTML = '';
+	});
 </script>
 
-<SlideShow data={sliderData} auto />
-<Banner />
-<Description />
+<div class="cargo" bind:this={cargoEl}>
+	<SlideShow data={sliderData} auto />
+	<Banner />
+	<Description title={$t('cargo.title')} description={$t('cargo.description')} />
+</div>

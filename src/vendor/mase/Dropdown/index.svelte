@@ -64,7 +64,7 @@
 			on:click={() => {
 				if (!disabled) opened = !opened;
 			}}
-			styles="padding: 0.3rem 1rem;width: fit-content; background: {selected
+			style="padding: 0.3rem 1rem;width: fit-content; background: {selected
 				? selected.color
 				: ''}; border-color: {selected ? selected.color : ''}"
 		>
@@ -100,7 +100,7 @@
 
 	dropdown {
 		display: block;
-		position: relative;
+		/* position: relative; */
 
 		.options {
 			display: none;
@@ -110,7 +110,7 @@
 			border: 1px solid lighten($color: $background, $amount: 20);
 			box-shadow: 0px 3px 6px 2px rgb(0 0 0 / 20%);
 			border-radius: 6px;
-			width: 100%;
+			width: fit-content;
 			z-index: 2;
 
 			&.opened {

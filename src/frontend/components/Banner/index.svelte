@@ -1,16 +1,16 @@
 <script>
+	import { t } from '$vendor/i18n/state';
+
 	import Button from '$vendor/mase/Button.svelte';
 </script>
 
 <div class="banner">
 	<div class="text">
-		<h2>Cerere Oferta</h2>
+		<h2>{$t('offer.title')}</h2>
 		<p>
-			Pentru o oferta personalizata, va rugam sa completati formularul disponibil sau ne puteti
-			trimite solicitarea pe mail la ccdtransport@yahoo.com. Colegii nostri vor raspunde in cel mai
-			scurt timp posibil.
+			{$t('offer.description')}
 		</p>
-		<Button color="default" link="/offer">Acceseaza</Button>
+		<Button color="default" link="/offer">{$t('offer.button')}</Button>
 	</div>
 	<div class="image" />
 </div>
@@ -131,7 +131,7 @@
 			@media screen and (min-width: 675px) {
 				@include angle(before, true, 65.5deg);
 			}
-			background: url('designs/truck_house.jpg');
+			background: url('/designs/truck_house.jpg');
 			background-size: cover;
 			background-repeat: no-repeat;
 			width: 500px;

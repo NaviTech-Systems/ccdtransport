@@ -1,15 +1,16 @@
 <script>
-	import Houses from '$components/Houses/index.svelte';
+	import Machinary from '$components/Machinary/index.svelte';
+	import { t } from '$vendor/i18n/state';
 	import SEO from '$vendor/mase/SEO';
 </script>
 
 <SEO
 	data={{
-		name: 'NaviTech Systems',
-		description: 'lorem ipsum',
-		url: 'https://navitech.systems',
+		name: 'CDD Euro Services - ' + $t('machinary.title'),
+		description: `${$t('machinary.description')}`.substr(0, 150) + '...',
+		url: 'https://ccdeuroservices.ro/machinary',
 		image: '',
-		title: 'NaviTech Systems'
+		title: 'CDD Euro Services - ' + $t('machinary.title')
 	}}
 />
-<Houses />
+<Machinary />

@@ -1,5 +1,7 @@
+import type { Translations } from './translantions';
+
 export interface LoadLanguages {
-	locales: string[];
+	locales: Translations;
 	locale: null | string = null;
 }
 

@@ -1,9 +1,17 @@
-<script>
+<script lang="ts">
+	import { onDestroy } from 'svelte';
+
 	import Form from './Form.svelte';
 	import Header from './Header.svelte';
+
+	let contactEl: HTMLElement;
+
+	onDestroy(() => {
+		if (contactEl) contactEl.innerHTML = '';
+	});
 </script>
 
-<div class="main">
+<div class="main" bind:this={contactEl}>
 	<Header />
 	<Form />
 </div>

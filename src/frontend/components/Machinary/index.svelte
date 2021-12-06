@@ -2,6 +2,7 @@
 	import SlideShow from '$vendor/mase/SlideShow';
 	import Banner from '$components/Banner/index.svelte';
 	import Description from '$components/Description/index.svelte';
+	import { t } from '$vendor/i18n/state';
 
 	const sliderData = [
 		{
@@ -24,4 +25,4 @@
 
 <SlideShow data={sliderData} auto />
 <Banner />
-<Description />
+<Description title={$t('machinary.title')} description={$t('machinary.description')} />

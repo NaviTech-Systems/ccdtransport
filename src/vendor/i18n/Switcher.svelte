@@ -21,7 +21,7 @@
 		>
 			<div style="display: inline-flex; height: 15px; margin: auto;" slot="element">
 				<img
-					src={`/api/static/flags/${$languages.locale || $languages.default}.svg`}
+					src={`/designs/flags/${$languages.locale || $languages.default}.svg`}
 					alt={$languages.locale || $languages.default}
 					height="15px"
 				/>
@@ -35,7 +35,7 @@
 			}}
 		>
 			<div class="option">
-				<img src={`/api/static/flags/${locale}.svg`} alt={locale} height="15px" />
+				<img src={`/designs/flags/${locale}.svg`} alt={locale} height="15px" />
 				<div class="text">
 					<span>
 						{locale}

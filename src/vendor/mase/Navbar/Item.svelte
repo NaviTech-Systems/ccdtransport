@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let effect: boolean,
+	export let effect: boolean = false,
 		logo = false,
 		link = false,
 		to = '',
@@ -9,7 +9,7 @@
 
 <item class:effect class:logo class:link class:selected on:click bind:this={el}>
 	{#if link && to}
-		<a href={to} alt="link">
+		<a href={to} alt="link" rel="external">
 			<slot />
 		</a>
 	{:else}
@@ -37,6 +37,11 @@
 
 		&.selected {
 			font-weight: 700;
+
+			span,
+			a {
+				color: darken($color: $primary-color, $amount: 5);
+			}
 		}
 
 		a {

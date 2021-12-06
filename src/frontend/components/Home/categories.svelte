@@ -1,45 +1,44 @@
 <script>
+	import { t } from '$vendor/i18n/state';
+
 	import Button from '$vendor/mase/Button.svelte';
 </script>
 
 <div class="categories">
 	<div class="item">
 		<img class="icon" src="designs/house.png" height="40px" alt="houses" />
-		<div class="title">Lorem ipsum dolor sit amet.</div>
+		<div class="title">{$t('category.houses-title')}</div>
 		<div class="description">
-			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti maxime officiis, possimus
-			nostrum ipsa alias beatae nemo blanditiis error fuga!
+			{$t('category.houses-description')}
 		</div>
 		<Button
 			link="/houses"
 			style="width: fit-content;"
 			textStyle="font-size: 0.8rem;"
-			color="primary">Mai Mult..</Button
+			color="primary">{$t('category.learnMore')}</Button
 		>
 	</div>
 	<div class="item">
 		<img class="icon" src="designs/cargo.webp" height="40px" alt="cargo" />
-		<div class="title">Lorem ipsum dolor sit amet.</div>
+		<div class="title">{$t('category.cargo-title')}</div>
 		<div class="description">
-			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti maxime officiis, possimus
-			nostrum ipsa alias beatae nemo blanditiis error fuga!
+			{$t('category.cargo-description')}
 		</div>
 		<Button link="/cargo" style="width: fit-content;" textStyle="font-size: 0.8rem;" color="primary"
-			>Mai Mult..</Button
+			>{$t('category.learnMore')}</Button
 		>
 	</div>
 	<div class="item">
 		<img class="icon" src="designs/utilaj.png" height="40px" alt="machinary" />
-		<div class="title">Lorem ipsum dolor sit amet.</div>
+		<div class="title">{$t('category.machinary-title')}</div>
 		<div class="description">
-			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti maxime officiis, possimus
-			nostrum ipsa alias beatae nemo blanditiis error fuga!
+			{$t('category.machinary-description')}
 		</div>
 		<Button
 			link="/machinary"
 			style="width: fit-content;"
 			textStyle="font-size: 0.8rem;"
-			color="primary">Mai Mult..</Button
+			color="primary">{$t('category.learnMore')}</Button
 		>
 	</div>
 </div>

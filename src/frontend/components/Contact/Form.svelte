@@ -8,6 +8,7 @@
 	import { contactStore, selectContactState } from '$state/contact';
 	import { contactInterceptor } from '$interceptors/contact';
 	import { sendMessage } from '$actions/contact';
+	import { onDestroy } from 'svelte';
 
 	const slicer = createSlicer(contactInterceptor, contactReducer, 'contact', contactStore);
 	const state = selectContactState;
@@ -34,6 +35,10 @@
 		if (Object.entries(errors).some(([_, item]) => item)) return;
 		doRecaptcha();
 	};
+
+	onDestroy(() => {
+		slicer.destroy();
+	});
 </script>
 
 <div class="form">

@@ -35,7 +35,6 @@
 			current = 0;
 		}
 		buffer[current].selected = true;
-		console.log('next exit', rotation, current);
 	};
 
 	const prev = (): void => {
@@ -51,7 +50,6 @@
 			current = buffer.length - 1;
 		}
 		buffer[current].selected = true;
-		console.log('prev exit', rotation, current);
 	};
 
 	const handleSelectSlide = (slide, index) => {

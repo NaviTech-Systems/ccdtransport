@@ -2,17 +2,15 @@
 	import App from '$src/App.svelte';
 	import Navbar from '$components/Navbar/index.svelte';
 	import Footer from '$components/Footer/index.svelte';
-	import { page } from '$app/stores';
+	import { navigating } from '$app/stores';
 </script>
 
 <App>
-	{#if !$page.path.includes('/admin')}
-		<Navbar />
+	<Navbar />
+	{#key $navigating}
 		<slot />
-		<Footer />
-	{:else}
-		<slot />
-	{/if}
+	{/key}
+	<Footer />
 </App>
 
 <style lang="scss">

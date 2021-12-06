@@ -1,14 +1,11 @@
+<script lang="ts">
+	export let title: any = '',
+		description: any = '';
+</script>
+
 <div class="description">
-	<h3>Lorem ipsum dolor sit amet.</h3>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dignissimos, nulla nobis deleniti,
-	nemo earum explicabo voluptas inventore doloribus dolorem nostrum ad, rem culpa numquam rerum. Quo
-	sapiente asperiores fugiat.Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dignissimos,
-	nulla nobis deleniti, nemo earum explicabo voluptas inventore doloribus dolorem nostrum ad, rem culpa
-	numquam rerum. Quo sapiente asperiores fugiat.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-	Veniam dignissimos, nulla nobis deleniti, nemo earum explicabo voluptas inventore doloribus dolorem
-	nostrum ad, rem culpa numquam rerum. Quo sapiente asperiores fugiat.Lorem ipsum dolor sit amet consectetur
-	adipisicing elit. Veniam dignissimos, nulla nobis deleniti, nemo earum explicabo voluptas inventore
-	doloribus dolorem nostrum ad, rem culpa numquam rerum. Quo sapiente asperiores fugiat.
+	<h3>{title}</h3>
+	{description}
 </div>
 
 <style lang="scss">

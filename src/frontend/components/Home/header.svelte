@@ -1,10 +1,11 @@
-<script>
+<script lang="ts">
+	import { t } from '$vendor/i18n/state';
 </script>
 
 <div class="main">
 	<div class="content">
-		<span class="min">CCD TRANSPORT</span>
-		<span class="title">Transport utilaje si Case mobile</span>
+		<span class="min">{$t('homepage.title')}</span>
+		<span class="title">{$t('homepage.subtitle')}</span>
 	</div>
 </div>
 
@@ -16,7 +17,7 @@
 		height: calc(100vh - 50px);
 
 		&::after {
-			background: url('/designs/map.png') no-repeat center;
+			background: url('/designs/map.webp') no-repeat center;
 			background-size: cover;
 			content: '';
 			position: absolute;
@@ -39,6 +40,7 @@
 				font-weight: 500;
 				color: #e9e9e9;
 				font-family: 'Roboto';
+				text-transform: uppercase;
 			}
 
 			.title {

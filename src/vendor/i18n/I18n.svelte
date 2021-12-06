@@ -1,40 +1,33 @@
 <script lang="ts">
-	import { createSlicer } from "../sedux";
-	import { onMount } from "svelte";
-	import { get } from "svelte/store";
-	import { i18nReducer } from "./reducer";
-	import { languages } from "./state";
-	import { loadLanguages } from "./actions";
-	import { CHANGE_LANGUAGE } from "./constants";
-	import { addListener } from "../sedux/listener";
-	import type { Translations } from "./types/translantions";
-	import type { Languages } from "./types/state";
-	import type { ChangeLanguage } from "./types/actions";
-	import type { ActionWithPayload } from "$vendor/sedux/types/slicer";
+	import { createSlicer } from '../sedux';
+	import { onMount } from 'svelte';
+	import { get } from 'svelte/store';
+	import { i18nReducer } from './reducer';
+	import { languages } from './state';
+	import { loadLanguages } from './actions';
+	import { CHANGE_LANGUAGE } from './constants';
+	import { addListener } from '../sedux/listener';
+	import type { Translations } from './types/translantions';
+	import type { Languages } from './types/state';
+	import type { ChangeLanguage } from './types/actions';
+	import type { ActionWithPayload } from '$vendor/sedux/types/slicer';
 
 	export let translations: Translations, url: string;
 
 	let loaded = false,
 		completeLoad = false;
 
-	const handleChangeLocale = ({
-		payload: { locale },
-	}: ActionWithPayload<ChangeLanguage>): void => {
+	const handleChangeLocale = ({ payload: { locale } }: ActionWithPayload<ChangeLanguage>): void => {
 		const rootElement = document.documentElement;
-		rootElement.setAttribute("lang", locale);
+		rootElement.setAttribute('lang', locale);
 	};
 
-	const slicer = createSlicer(null, i18nReducer, "i18n", languages);
+	const slicer = createSlicer(null, i18nReducer, 'i18n', languages);
 
-	slicer.dispatch(() =>
-		loadLanguages(
-			Object.entries(translations).map(([key]) => key),
-			"en"
-		)
-	);
+	slicer.dispatch(() => loadLanguages(translations, 'en'));
 
 	onMount(() => {
-		if (typeof window !== "undefined") {
+		if (typeof window !== 'undefined') {
 			const locale =
 				(navigator.languages && navigator.languages[0]) || // Chrome / Firefox
 				navigator.language;
@@ -47,7 +40,7 @@
 
 				loaded = i18n._persistLoaded;
 
-				if (typeof state !== "undefined" && state.locale) {
+				if (typeof state !== 'undefined' && state.locale) {
 					rootElement.setAttribute(`lang`, `${state.locale}`);
 				}
 			});
@@ -56,12 +49,7 @@
 				completeLoad = loaded && value.locales !== null;
 			});
 
-			slicer.dispatch(() =>
-				loadLanguages(
-					Object.entries(translations).map(([key]) => key),
-					locale.slice(0, 2)
-				)
-			);
+			slicer.dispatch(() => loadLanguages(translations, locale.slice(0, 2)));
 
 			addListener(CHANGE_LANGUAGE, handleChangeLocale);
 		}

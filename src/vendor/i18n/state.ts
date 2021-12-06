@@ -5,7 +5,7 @@ import type { Languages } from './types/state';
 const initialState = {
 	locale: null,
 	locales: null,
-	default: 'en'
+	default: 'ro'
 } as Languages;
 
 export const languages = storex(initialState);
@@ -17,7 +17,9 @@ const localizedDict = derived([languages], ([$languages]) => {
 
 const getMessageFromLocalizedDict = (id: string, localized: typeof localizedDict) => {
 	const splitId = id.split('.');
+
 	let message = { ...localized };
+
 	splitId.forEach((partialId: string) => {
 		message = message[partialId];
 	});

@@ -5,11 +5,11 @@
 
 <SEO
 	data={{
-		name: 'NaviTech Systems',
+		name: 'CDD Euro Services - Contact',
 		description: 'lorem ipsum',
-		url: 'https://navitech.systems',
+		url: 'https://ccdeuroservices.ro/contact',
 		image: '',
-		title: 'NaviTech Systems'
+		title: 'CDD Euro Services - Contact'
 	}}
 />
 <Contact />
