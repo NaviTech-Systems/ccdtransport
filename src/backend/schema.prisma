@@ -1,6 +1,6 @@
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://postgres:@localhost/company"
+  url      = "postgresql://ccd:awesome-pass-11@localhost/ccd"
 }
 
 generator client {
