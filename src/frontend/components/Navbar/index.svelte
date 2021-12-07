@@ -18,7 +18,7 @@
 			>{$t('navbar.contact')}</Item
 		>
 		<Group dir="center">
-			<Item effect link to="/"
+			<Item effect link to={$composeUrl('/')}
 				><img src="/designs/logo.svg" style="height: 100%;" alt="logo" /></Item
 			>
 		</Group>
@@ -36,7 +36,9 @@
 		</Group>
 	</svelte:fragment>
 	<svelte:fragment slot="tablet">
-		<Item effect link to="/"><img src="/designs/logo.svg" style="height: 100%;" alt="logo" /></Item>
+		<Item effect link to={$composeUrl('/')}
+			><img src="/designs/logo.svg" style="height: 100%;" alt="logo" /></Item
+		>
 		<Group dir="right">
 			<Item><Switcher /></Item>
 			<Item effect link to={$composeUrl('/')} selected={$page.path === '/'}
@@ -80,7 +82,7 @@
 	<svelte:fragment slot="logo">
 		<Item><Switcher /></Item>
 		<Group dir="center">
-			<Item effect link to="/"
+			<Item effect link to={$composeUrl('/')}
 				><img src="/designs/logo.svg" style="height: 100%;" alt="logo" /></Item
 			>
 		</Group>
