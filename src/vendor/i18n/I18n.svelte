@@ -16,11 +16,22 @@
 
 	export let translations: Translations, url: string;
 
-	let loaded = false;
-
 	const handleChangeLocale = ({ payload: { locale } }: ActionWithPayload<ChangeLanguage>): void => {
 		const rootElement = document.documentElement;
 		rootElement.setAttribute('lang', locale);
+		const regex = new RegExp(`^/${$languages.prevLocale}`);
+		const path = window.location.pathname;
+		const match = path.match(regex);
+		let newPath = path;
+
+		if ((typeof match !== 'undefined' && match !== null) || path === '/') {
+			if (path.split('/').length === 2) newPath = path.replace(regex, `/${locale}`);
+			else newPath = path.replace(regex, `${locale}`);
+
+			if (path === '/') newPath = `/${locale}`;
+
+			window.history.pushState({ page: '' }, '', newPath);
+		}
 	};
 
 	const slicer = createSlicer(null, i18nReducer, 'i18n', languages);
@@ -37,8 +48,6 @@
 
 			slicer.subscribe(({ i18n }) => {
 				const state = get<Languages>(i18n.state);
-
-				loaded = i18n._persistLoaded;
 
 				if (typeof state !== 'undefined' && state.locale) {
 					rootElement.setAttribute(`lang`, `${state.locale}`);

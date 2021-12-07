@@ -13,6 +13,7 @@ export const i18nReducer: Reducer<Languages> = (action, state) => {
 			}
 			break;
 		case CHANGE_LANGUAGE:
+			draft.prevLocale = draft.locale;
 			draft.locale = action.payload.locale;
 			break;
 	}

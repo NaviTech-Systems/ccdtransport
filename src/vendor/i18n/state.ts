@@ -5,7 +5,8 @@ import type { Languages } from './types/state';
 const initialState = {
 	locale: null,
 	locales: null,
-	default: 'ro'
+	default: 'ro',
+	prevLocale: null
 } as Languages;
 
 export const languages = storex(initialState);
