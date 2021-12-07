@@ -12,17 +12,17 @@
 		},
 		{
 			description: 'aaaaaaa',
-			image: 'designs/utilaj_2.webp',
+			image: '/designs/utilaj_2.webp',
 			selected: false
 		},
 		{
 			description: 'bbbb',
-			image: 'designs/utilaj_3.webp',
+			image: '/designs/utilaj_3.webp',
 			selected: false
 		}
 	];
 </script>
 
 <SlideShow data={sliderData} auto rotation />
-<Banner image="designs/utilaj_2.webp" />
+<Banner image="/designs/utilaj_2.webp" />
 <Description title={$t('machinary.title')} description={$t('machinary.description')} />
