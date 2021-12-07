@@ -52,6 +52,7 @@
 
 			if (localStorage.getItem('i18n')) {
 				slicer.dispatch(() => loadLanguages(translations, localStorage.getItem('i18n')));
+				rootElement.setAttribute(`lang`, `${localStorage.getItem('i18n')}`);
 			} else {
 				slicer.dispatch(() => loadLanguages(translations, locale.slice(0, 2)));
 			}
