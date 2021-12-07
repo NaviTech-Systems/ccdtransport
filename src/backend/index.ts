@@ -1,4 +1,4 @@
-import prisma from '@prisma/client';
+import * as prisma from '@prisma/client';
 const { PrismaClient } = prisma;
 let db;
 

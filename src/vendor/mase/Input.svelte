@@ -113,6 +113,7 @@
 			{maxlength}
 			{disabled}
 			{autocomplete}
+			{type}
 			style="font-size: {size};"
 			on:keyup|preventDefault={handleKeyPress}
 		/>
@@ -190,6 +191,19 @@
 			&:focus {
 				outline: none;
 			}
+		}
+
+		input[type='date'] {
+			display: block;
+
+			/* Solution 1 */
+			-webkit-appearance: textfield;
+			-moz-appearance: textfield;
+			background: none;
+			min-height: 1.2em;
+
+			/* Solution 2 */
+			/* min-width: 96%; */
 		}
 
 		&.disabled {

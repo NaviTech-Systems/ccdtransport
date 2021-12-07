@@ -16,8 +16,7 @@
 
 	export let translations: Translations, url: string;
 
-	let loaded = false,
-		completeLoad = false;
+	let loaded = false;
 
 	const handleChangeLocale = ({ payload: { locale } }: ActionWithPayload<ChangeLanguage>): void => {
 		const rootElement = document.documentElement;
@@ -35,7 +34,6 @@
 				navigator.language;
 
 			const rootElement = document.documentElement;
-			rootElement.setAttribute(`lang`, `${locale.slice(0, 2)}`);
 
 			slicer.subscribe(({ i18n }) => {
 				const state = get<Languages>(i18n.state);
@@ -48,7 +46,6 @@
 			});
 
 			languages.subscribe((value) => {
-				completeLoad = loaded && value.locales !== null;
 				if (value.locale) localStorage.setItem('i18n', value.locale);
 			});
 
@@ -57,6 +54,7 @@
 				slicer.dispatch(() => loadLanguages(translations, lang));
 				rootElement.setAttribute(`lang`, `${lang}`);
 			} else {
+				rootElement.setAttribute(`lang`, `${locale.slice(0, 2)}`);
 				slicer.dispatch(() => loadLanguages(translations, locale.slice(0, 2)));
 			}
 
