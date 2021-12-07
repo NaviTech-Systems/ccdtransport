@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { t } from '$vendor/i18n/state';
+</script>
+
 <div class="header">
-	<h1 class="title">Cerere Oferta</h1>
+	<h1 class="title">{$t('createOffer.title')}</h1>
 </div>

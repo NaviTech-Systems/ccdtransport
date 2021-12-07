@@ -62,8 +62,8 @@
 </script>
 
 <svelte:head>
-	{#if completeLoad}
-		{#each Object.keys($languages.locales) as lang}
+	{#if Object.keys(translations).length > 0}
+		{#each Object.keys(translations) as lang}
 			<link rel="alternate" href={url} hreflang={lang} />
 		{/each}
 	{/if}

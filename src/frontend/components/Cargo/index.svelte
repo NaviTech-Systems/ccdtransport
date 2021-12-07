@@ -8,17 +8,12 @@
 	const sliderData = [
 		{
 			description: 'fdsffffff',
-			image: 'designs/map.png',
+			image: '/designs/palet_1.webp',
 			selected: true
 		},
 		{
 			description: 'aaaaaaa',
-			image: 'designs/map.png',
-			selected: false
-		},
-		{
-			description: 'bbbb',
-			image: 'designs/map.png',
+			image: '/designs/cargo_2.webp',
 			selected: false
 		}
 	];
@@ -32,6 +27,6 @@
 
 <div class="cargo" bind:this={cargoEl}>
 	<SlideShow data={sliderData} auto />
-	<Banner />
+	<Banner image="/designs/palet_1.webp" rotation />
 	<Description title={$t('cargo.title')} description={$t('cargo.description')} />
 </div>

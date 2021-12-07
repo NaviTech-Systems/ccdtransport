@@ -7,22 +7,22 @@
 	const sliderData = [
 		{
 			description: 'fdsffffff',
-			image: 'designs/map.png',
+			image: '/designs/utilaj_1.webp',
 			selected: true
 		},
 		{
 			description: 'aaaaaaa',
-			image: 'designs/map.png',
+			image: 'designs/utilaj_2.webp',
 			selected: false
 		},
 		{
 			description: 'bbbb',
-			image: 'designs/map.png',
+			image: 'designs/utilaj_3.webp',
 			selected: false
 		}
 	];
 </script>
 
-<SlideShow data={sliderData} auto />
-<Banner />
+<SlideShow data={sliderData} auto rotation />
+<Banner image="designs/utilaj_2.webp" />
 <Description title={$t('machinary.title')} description={$t('machinary.description')} />

@@ -1,7 +1,9 @@
-<script>
+<script lang="ts">
 	import { t } from '$vendor/i18n/state';
 
 	import Button from '$vendor/mase/Button.svelte';
+
+	export let image: string = '/designs/casa_1.webp';
 </script>
 
 <div class="banner">
@@ -12,7 +14,7 @@
 		</p>
 		<Button color="default" link="/offer">{$t('offer.button')}</Button>
 	</div>
-	<div class="image" />
+	<div class="image" style="--img: url({image})" />
 </div>
 
 <style lang="scss">
@@ -131,7 +133,7 @@
 			@media screen and (min-width: 675px) {
 				@include angle(before, true, 65.5deg);
 			}
-			background: url('/designs/truck_house.jpg');
+			background: var(--img);
 			background-size: cover;
 			background-repeat: no-repeat;
 			width: 500px;

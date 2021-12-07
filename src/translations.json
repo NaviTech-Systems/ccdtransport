@@ -53,7 +53,8 @@
 			"name": "Nume si Prenume",
 			"email": "Email",
 			"message": "Mesaj",
-			"submit": "Trimite"
+			"submit": "Trimite",
+			"title": "Contact"
 		},
 		"createOffer": {
 			"personDetails": "Detalii Persoana",
@@ -71,7 +72,8 @@
 			"width": "Latime (m)",
 			"height": "Inaltime (m)",
 			"date": "Data",
-			"transportTimeEstimated": "Timp estimat de transport"
+			"transportTimeEstimated": "Timp estimat de transport",
+			"title": "Cerere Oferta"
 		}
 	},
 	"en": {
@@ -128,7 +130,8 @@
 			"name": "Name and Surname",
 			"email": "Email",
 			"submit": "Send",
-			"message": "Message"
+			"message": "Message",
+			"title": "Contact Us"
 		},
 		"createOffer": {
 			"personDetails": "Person Details",
@@ -146,7 +149,8 @@
 			"width": "Width (m)",
 			"height": "Height (m)",
 			"date": "Date",
-			"transportTimeEstimated": "Transport Time Estimated"
+			"transportTimeEstimated": "Transport Time Estimated",
+			"title": "Create Offer"
 		}
 	}
 }

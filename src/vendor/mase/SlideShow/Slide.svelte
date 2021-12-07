@@ -7,14 +7,14 @@
 <div
 	class="slide"
 	class:current={slide.selected}
-	style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('{slide.image}') no-repeat center top/cover;"
+	style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('{slide.image}') no-repeat center center/cover;"
 >
 	<div class="content">
 		<p>{slide.description}</p>
 	</div>
 </div>
 
-<style>
+<style lang="scss">
 	.slide {
 		position: absolute;
 		top: 0;
@@ -34,10 +34,20 @@
 		bottom: 70px;
 		left: -600px;
 		opacity: 0;
-		width: 600px;
+		width: 500px;
 		background-color: rgba(255, 255, 255, 0.8);
 		color: #333;
-		padding: 35px;
+		padding: 2rem;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	@media screen and (max-width: 500px) {
+		.slide .content {
+			width: 100%;
+		}
 	}
 
 	.slide.current .content {

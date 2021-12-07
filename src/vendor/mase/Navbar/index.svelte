@@ -30,7 +30,7 @@
 		<MediaQuery query="(min-width: 1200px)" let:matches>
 			{#if matches === true}
 				<slot name="desktop" />
-			{:else}
+			{:else if matches === false}
 				<MediaQuery query="(max-width: 800px)" let:matches>
 					{#if matches === true}
 						<slot name="logo" />
