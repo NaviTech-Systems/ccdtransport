@@ -20,12 +20,33 @@
 		matches = mql.matches;
 
 		mqlListener = (v) => (matches = v.matches);
-		mql.addEventListener('change', mqlListener);
+
+		try {
+			// Chrome & Firefox
+			mql.addEventListener('change', mqlListener);
+		} catch (e1) {
+			try {
+				// Safari
+				mql.addListener(mqlListener);
+			} catch (e2) {
+				console.error(e2);
+			}
+		}
 	}
 
 	function removeActiveListener(): void {
 		if (mql && mqlListener) {
-			mql.removeEventListener('change', mqlListener);
+			try {
+				// Chrome & Firefox
+				mql.removeEventListener('change', mqlListener);
+			} catch (e1) {
+				try {
+					// Safari
+					mql.removeListener(mqlListener);
+				} catch (e2) {
+					console.error(e2);
+				}
+			}
 		}
 	}
 </script>
