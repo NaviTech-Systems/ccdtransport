@@ -9,6 +9,7 @@
 	export let auto = false;
 	export let interval = 5000;
 
+	let touchStartX: number, touchEndX: number;
 	let current = 0;
 	let slideInterval: NodeJS.Timeout;
 
@@ -59,12 +60,25 @@
 		buffer = [...buffer];
 	};
 
+	const handleTouchStart = (e: TouchEvent): void => {
+		touchStartX = e.changedTouches[0].clientX;
+	};
+
+	const handleTouchEnd = (e: TouchEvent): void => {
+		touchEndX = e.changedTouches[0].clientX;
+		if (touchEndX < touchStartX) {
+			next();
+		} else if (touchEndX > touchStartX) {
+			prev();
+		}
+	};
+
 	onMount(() => {
 		setSlideAutomation();
 	});
 </script>
 
-<div class="slider">
+<div class="slider" on:touchstart={handleTouchStart} on:touchend={handleTouchEnd}>
 	{#each buffer as slide}
 		<Slide {slide} />
 	{/each}
