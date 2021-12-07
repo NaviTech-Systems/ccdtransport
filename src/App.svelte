@@ -7,7 +7,7 @@
 </script>
 
 <Sedux>
-	<I18n {translations} url="http://51.68.190.89/">
+	<I18n {translations} url="http://51.68.190.89">
 		{#if !$navigating}
 			<slot />
 		{:else}

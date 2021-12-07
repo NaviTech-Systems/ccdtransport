@@ -68,7 +68,7 @@
 <svelte:head>
 	{#if Object.keys(translations).length > 0}
 		{#each Object.keys(translations) as lang}
-			<link rel="alternate" href={$composeUrl($page.path)} hreflang={lang} />
+			<link rel="alternate" href={`${url}${$composeUrl($page.path)}`} hreflang={lang} />
 		{/each}
 	{/if}
 </svelte:head>
