@@ -1,25 +1,39 @@
 import { start } from '$backend/index';
 
+const i18n = {
+	locales: ['en', 'ro'],
+	defaultLocale: 'en'
+};
+
 /** @type {import('@sveltejs/kit').Handle} */
-export async function handle({ request, resolve }) {
-	// console.log(path);
-	// if (path.includes("/api")) {
-	console.log('init', start);
+export const handle = async ({ request, resolve }): Promise<() => any> => {
 	await start();
-	// }
 
-	const { path } = request;
-	const response = await resolve(request);
+	let lang = i18n.defaultLocale;
+	let path = request.path;
 
-	return {
-		...response,
-		headers: {
-			...response.headers,
-			'x-custom-header': 'potato'
+	i18n.locales.forEach((locale) => {
+		const regex = new RegExp(`^/${locale}`);
+		const match = path.match(regex);
+
+		if (typeof match !== 'undefined' && match !== null) {
+			lang = locale;
+			console.log(path.split('/').length, "path.split('/').length");
+
+			if (path.split('/').length === 2) path = path.replace(regex, '/');
+			else path = path.replace(regex, '');
 		}
-	};
-}
+	});
+	request.path = path;
+	request.locals.lang = lang;
 
-// export const prepare = async () => {
-// 	await start();
-// };
+	const response = await resolve(request);
+	return response;
+};
+
+export const getSession = (request) => {
+	return {
+		lang: request.locals.lang || i18n.defaultLocale,
+		path: request.path
+	};
+};

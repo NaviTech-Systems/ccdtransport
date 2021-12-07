@@ -35,7 +35,7 @@
 	{:else if $$slots.element}
 		<slot name="element" />
 	{:else if link !== ''}
-		<a href={link} style={textStyle}>
+		<a href={link} style={textStyle} rel="external">
 			<slot />
 		</a>
 	{:else}

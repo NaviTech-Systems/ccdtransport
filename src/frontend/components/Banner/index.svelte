@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { t } from '$vendor/i18n/state';
+	import { composeUrl } from '$vendor/i18n/utils';
 
 	import Button from '$vendor/mase/Button.svelte';
 
@@ -12,7 +13,7 @@
 		<p>
 			{$t('offer.description')}
 		</p>
-		<Button color="default" link="/offer">{$t('offer.button')}</Button>
+		<Button color="default" link={$composeUrl('/offer')}>{$t('offer.button')}</Button>
 	</div>
 	<div class="image" style="--img: url({image})" />
 </div>

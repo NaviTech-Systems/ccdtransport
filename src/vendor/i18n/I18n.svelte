@@ -11,6 +11,7 @@
 	import type { Languages } from './types/state';
 	import type { ChangeLanguage } from './types/actions';
 	import type { ActionWithPayload } from '$vendor/sedux/types/slicer';
+	import { page, session } from '$app/stores';
 
 	export let translations: Translations, url: string;
 
@@ -24,7 +25,7 @@
 
 	const slicer = createSlicer(null, i18nReducer, 'i18n', languages);
 
-	slicer.dispatch(() => loadLanguages(translations, 'en'));
+	slicer.dispatch(() => loadLanguages(translations, $session.lang || 'en'));
 
 	onMount(() => {
 		if (typeof window !== 'undefined') {
@@ -50,9 +51,10 @@
 				if (value.locale) localStorage.setItem('i18n', value.locale);
 			});
 
-			if (localStorage.getItem('i18n')) {
-				slicer.dispatch(() => loadLanguages(translations, localStorage.getItem('i18n')));
-				rootElement.setAttribute(`lang`, `${localStorage.getItem('i18n')}`);
+			if (localStorage.getItem('i18n') || $session.lang) {
+				let lang = localStorage.getItem('i18n') || $session.lang;
+				slicer.dispatch(() => loadLanguages(translations, lang));
+				rootElement.setAttribute(`lang`, `${lang}`);
 			} else {
 				slicer.dispatch(() => loadLanguages(translations, locale.slice(0, 2)));
 			}
@@ -65,7 +67,7 @@
 <svelte:head>
 	{#if Object.keys(translations).length > 0}
 		{#each Object.keys(translations) as lang}
-			<link rel="alternate" href={url} hreflang={lang} />
+			<link rel="alternate" href={`${url}${lang}${$page.path}`} hreflang={lang} />
 		{/each}
 	{/if}
 </svelte:head>

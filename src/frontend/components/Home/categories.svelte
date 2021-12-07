@@ -1,41 +1,45 @@
 <script>
 	import { t } from '$vendor/i18n/state';
+	import { composeUrl } from '$vendor/i18n/utils';
 
 	import Button from '$vendor/mase/Button.svelte';
 </script>
 
 <div class="categories">
 	<div class="item">
-		<img class="icon" src="designs/house.png" height="40px" alt="houses" />
+		<img class="icon" src="/designs/house.png" height="40px" alt="houses" />
 		<div class="title">{$t('category.houses-title')}</div>
 		<div class="description">
 			{$t('category.houses-description')}
 		</div>
 		<Button
-			link="/houses"
+			link={$composeUrl('/houses')}
 			style="width: fit-content;"
 			textStyle="font-size: 0.8rem;"
 			color="primary">{$t('category.learnMore')}</Button
 		>
 	</div>
 	<div class="item">
-		<img class="icon" src="designs/cargo.webp" height="40px" alt="cargo" />
+		<img class="icon" src="/designs/cargo.webp" height="40px" alt="cargo" />
 		<div class="title">{$t('category.cargo-title')}</div>
 		<div class="description">
 			{$t('category.cargo-description')}
 		</div>
-		<Button link="/cargo" style="width: fit-content;" textStyle="font-size: 0.8rem;" color="primary"
-			>{$t('category.learnMore')}</Button
+		<Button
+			link={$composeUrl('/cargo')}
+			style="width: fit-content;"
+			textStyle="font-size: 0.8rem;"
+			color="primary">{$t('category.learnMore')}</Button
 		>
 	</div>
 	<div class="item">
-		<img class="icon" src="designs/utilaj.png" height="40px" alt="machinary" />
+		<img class="icon" src="/designs/utilaj.png" height="40px" alt="machinary" />
 		<div class="title">{$t('category.machinary-title')}</div>
 		<div class="description">
 			{$t('category.machinary-description')}
 		</div>
 		<Button
-			link="/machinary"
+			link={$composeUrl('/machinary')}
 			style="width: fit-content;"
 			textStyle="font-size: 0.8rem;"
 			color="primary">{$t('category.learnMore')}</Button

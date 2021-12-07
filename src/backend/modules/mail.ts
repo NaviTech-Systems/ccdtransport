@@ -20,7 +20,7 @@ export const notifyOffer = async (offer: Offer): Promise<void> => {
     </p>
     `;
 
-	sendMail('ccdtransport@yahoo.com', 'Noua Oferta', message, false);
+	// sendMail('ccdtransport@yahoo.com', 'Noua Oferta', message, false);
 };
 
 export const notifyContact = async (contact: Contact): Promise<void> => {
@@ -32,7 +32,7 @@ export const notifyContact = async (contact: Contact): Promise<void> => {
     </p>
     `;
 
-	sendMail('ccdtransport@yahoo.com', 'Nou Contact', message, false);
+	// sendMail('ccdtransport@yahoo.com', 'Nou Contact', message, false);
 };
 
 export const sendMail = async (

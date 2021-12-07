@@ -7,7 +7,10 @@ export const i18nReducer: Reducer<Languages> = (action, state) => {
 	switch (action.type) {
 		case LOAD_LANGUAGES:
 			draft.locales = action.payload.locales;
-			if (action.payload.locale) state.default = action.payload.locale;
+			if (action.payload.locale) {
+				state.default = action.payload.locale;
+				state.locale = action.payload.locale;
+			}
 			break;
 		case CHANGE_LANGUAGE:
 			draft.locale = action.payload.locale;
