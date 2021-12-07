@@ -12,6 +12,7 @@
 	import type { ChangeLanguage } from './types/actions';
 	import type { ActionWithPayload } from '$vendor/sedux/types/slicer';
 	import { page, session } from '$app/stores';
+	import { composeUrl } from './utils';
 
 	export let translations: Translations, url: string;
 
@@ -67,7 +68,7 @@
 <svelte:head>
 	{#if Object.keys(translations).length > 0}
 		{#each Object.keys(translations) as lang}
-			<link rel="alternate" href={`${url}${lang}${$page.path}`} hreflang={lang} />
+			<link rel="alternate" href={$composeUrl($page.path)} hreflang={lang} />
 		{/each}
 	{/if}
 </svelte:head>
