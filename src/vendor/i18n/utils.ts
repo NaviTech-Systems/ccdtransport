@@ -8,6 +8,13 @@ const createUrlFormatter = (languages) => (url: string) => {
 	return `/${languages.locale}${url}`;
 };
 
+export const formatUrl = (url: string, locale = null): string => {
+	if (url === '/') {
+		return `/${locale}`;
+	}
+	return `/${locale}${url}`;
+};
+
 export const composeUrl = derived([languages], ([$languages]) => {
 	console.log($languages);
 
