@@ -18,4 +18,5 @@
 	{#if data.keywords && data.keywords.length}
 		<meta name="keywords" content={data.keywords.join(', ')} />
 	{/if}
+	<link rel="canonical" href={data.url} />
 </svelte:head>
