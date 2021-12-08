@@ -36,7 +36,7 @@
 
 	const message = {
 		address: '',
-		firstLastNAme: '',
+		firstLastName: '',
 		phone: '',
 		email: '',
 		message: '',
@@ -71,7 +71,7 @@
 		<Input
 			label={$t('createOffer.name')}
 			bigLabel
-			bind:value={message.firstLastNAme}
+			bind:value={message.firstLastName}
 			notEmpty
 			bind:error={errors.contactPerson}
 		/>
