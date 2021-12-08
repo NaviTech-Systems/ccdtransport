@@ -10,7 +10,8 @@
 		description: `${$t('aboutus.description')}`.substr(0, 150) + '...',
 		url: 'https://ccdeuroservices.ro/',
 		image: '',
-		title: 'CDD Euro Services'
+		title: 'CDD Euro Services',
+		keywords: $t('homepage.keywords')
 	}}
 />
 

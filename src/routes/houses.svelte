@@ -10,7 +10,8 @@
 		description: `${$t('houses.description')}`.substr(0, 150) + '...',
 		url: 'https://ccdeuroservices.ro/houses',
 		image: '',
-		title: 'CDD Euro Services  - ' + $t('houses.title')
+		title: 'CDD Euro Services  - ' + $t('houses.title'),
+		keywords: $t('houses.keywords')
 	}}
 />
 <Houses />

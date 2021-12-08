@@ -15,4 +15,7 @@
 	<meta name="twitter:title" content={data.name} />
 	<meta name="twitter:description" content={data.description} />
 	<meta name="twitter:image:src" content={data.image} />
+	{#if data.keywords && data.keywords.length}
+		<meta name="keywords" content={data.keywords.join(', ')} />
+	{/if}
 </svelte:head>

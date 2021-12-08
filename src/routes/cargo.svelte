@@ -10,7 +10,8 @@
 		description: `${$t('cargo.description')}`.substr(0, 150) + '...',
 		url: 'https://ccdeuroservices.ro/cargo',
 		image: '',
-		title: 'CDD Euro Services - ' + $t('cargo.title')
+		title: 'CDD Euro Services - ' + $t('cargo.title'),
+		keywords: $t('cargo.keywords')
 	}}
 />
 <Cargo />

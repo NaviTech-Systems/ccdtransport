@@ -4,4 +4,5 @@ export interface Data {
 	image: string;
 	url: string;
 	name: string;
+	keywords?: string[] & any;
 }

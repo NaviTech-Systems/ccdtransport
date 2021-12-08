@@ -10,7 +10,8 @@
 		description: `${$t('machinary.description')}`.substr(0, 150) + '...',
 		url: 'https://ccdeuroservices.ro/machinary',
 		image: '',
-		title: 'CDD Euro Services - ' + $t('machinary.title')
+		title: 'CDD Euro Services - ' + $t('machinary.title'),
+		keywords: $t('machinary.keywords')
 	}}
 />
 <Machinary />
