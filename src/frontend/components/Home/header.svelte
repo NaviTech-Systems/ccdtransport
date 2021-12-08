@@ -4,7 +4,7 @@
 
 <div class="main">
 	<div class="content">
-		<span class="min">{$t('homepage.title')}</span>
+		<h1 class="min">{$t('homepage.title')}</h1>
 		<span class="title">{$t('homepage.subtitle')}</span>
 	</div>
 </div>

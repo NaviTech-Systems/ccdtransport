@@ -6,11 +6,11 @@
 
 <SEO
 	data={{
-		name: 'CDD Euro Services',
+		name: `CDD Euro Services - ${$t('homepage.subtitle')}`,
 		description: `${$t('aboutus.description')}`.substr(0, 150) + '...',
 		url: 'https://ccdeuroservices.ro/',
 		image: '',
-		title: 'CDD Euro Services',
+		title: `CDD Euro Services - ${$t('homepage.subtitle')}`,
 		keywords: $t('homepage.keywords')
 	}}
 />
