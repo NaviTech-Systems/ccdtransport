@@ -27,7 +27,7 @@
 		},
 		"houses": {
 			"title": "Case Mobile",
-			"description": "Suntem specializati in furnizarea de servicii de transport pentru case mobile din Europa, in special din Marea Britanie in Romania, dar eforturile noastre nu se opresc aici. La cerere oferim si declaratia vamala si toate celelalte documente pentru a va aduce casa pe roti in siguranta, in România."
+			"description": "Suntem specializati in furnizarea de servicii de transport pentru case mobile din Europa, in special din Marea Britanie in Romania, dar eforturile noastre nu se opresc aici. La cerere oferim si declaratia vamala si toate celelalte documente pentru a va aduce casa pe roti in siguranta, in România. Putem transporta case mobile cu dimensiunile maxime de: 11 metri lungime, 3.20 metri latime, respectiv 10ft"
 		},
 		"machinary": {
 			"title": "Utilaje",
@@ -73,7 +73,8 @@
 			"height": "Inaltime (m)",
 			"date": "Data",
 			"transportTimeEstimated": "Timp estimat de transport",
-			"title": "Cerere Oferta"
+			"title": "Cerere Oferta",
+			"successMessage": "Mesajul dumneavoastra a fost trimis cu succes. Va vom raspunde in cel mai scurt timp posibil."
 		}
 	},
 	"en": {
@@ -104,7 +105,7 @@
 		},
 		"houses": {
 			"title": "Mobile Houses",
-			"description": "We are specialized on providing transport services for static caravans from Europe, especially from United Kingdom to Romania, but our efforts do not end here.On demand, we also offer the customs declaration and all other documents in order to bring your home on wheels safely to Romania."
+			"description": "We are specialized on providing transport services for static caravans from Europe, especially from United Kingdom to Romania, but our efforts do not end here.On demand, we also offer the customs declaration and all other documents in order to bring your home on wheels safely to Romania. We cand transport mobile houses with the maximum dimensions of: 11 meters length (35ft), 3.20 meters width (10ft)"
 		},
 		"machinary": {
 			"title": "Machinary",
@@ -150,7 +151,8 @@
 			"height": "Height (m)",
 			"date": "Date",
 			"transportTimeEstimated": "Transport Time Estimated",
-			"title": "Create Offer"
+			"title": "Create Offer",
+			"successMessage": "Your offer has been sent successfully. We will contact you as soon as possible."
 		}
 	}
 }

@@ -163,6 +163,11 @@
 			notEmpty
 			bind:error={errors.startDate}
 		/>
+		{#if $state.state === 'completed'}
+			<div class="success">
+				<p>{$t('createOffer.successMessage')}</p>
+			</div>
+		{/if}
 		<div class="actions">
 			<Button
 				color="primary"
@@ -199,6 +204,13 @@
 			.actions {
 				margin-top: 1rem;
 				margin-inline-start: auto;
+			}
+
+			.success {
+				p {
+					font-size: 0.8rem;
+					color: green;
+				}
 			}
 		}
 	}

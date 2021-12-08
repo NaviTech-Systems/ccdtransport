@@ -13,7 +13,7 @@
 		},
 		{
 			description: 'aaaaaaa',
-			image: '/designs/casa_2.webp',
+			image: '/designs/casa_3.webp',
 			selected: false
 		}
 	];
