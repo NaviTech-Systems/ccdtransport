@@ -9,9 +9,11 @@
 	class:current={slide.selected}
 	style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('{slide.image}') no-repeat center center/cover;"
 >
-	<div class="content">
-		<p>{slide.description}</p>
-	</div>
+	{#if slide.description}
+		<div class="content">
+			<p>{slide.description}</p>
+		</div>
+	{/if}
 </div>
 
 <style lang="scss">

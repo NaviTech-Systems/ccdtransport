@@ -6,17 +6,17 @@
 
 	const sliderData = [
 		{
-			description: 'fdsffffff',
+			description: $t('machinary.slide-1-title'),
 			image: '/designs/utilaj_1.webp',
 			selected: true
 		},
 		{
-			description: 'aaaaaaa',
+			description: $t('machinary.slide-2-title'),
 			image: '/designs/utilaj_2.webp',
 			selected: false
 		},
 		{
-			description: 'bbbb',
+			description: $t('machinary.slide-3-title'),
 			image: '/designs/utilaj_3.webp',
 			selected: false
 		}

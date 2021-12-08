@@ -7,12 +7,12 @@
 
 	const sliderData = [
 		{
-			description: 'fdsffffff',
+			description: 'Casa Mobila Birmingham - Delta Dunarii',
 			image: '/designs/casa_1.webp',
 			selected: true
 		},
 		{
-			description: 'aaaaaaa',
+			description: 'Casa Mobila Londra - Suceava',
 			image: '/designs/casa_3.webp',
 			selected: false
 		}
