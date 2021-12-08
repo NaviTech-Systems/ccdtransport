@@ -4,7 +4,7 @@
 </script>
 
 <div class="description">
-	<h3>{title}</h3>
+	<h1>{title}</h1>
 	{description}
 </div>
 
@@ -24,11 +24,12 @@
 			margin: 0 1rem;
 		}
 
-		h3 {
+		h1 {
 			text-align: center;
 			color: $font-color-full;
 			margin: 0;
 			margin-bottom: 1rem;
+			font-size: 1.2rem;
 		}
 	}
 </style>
