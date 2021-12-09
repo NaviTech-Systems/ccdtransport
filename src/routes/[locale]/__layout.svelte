@@ -2,7 +2,7 @@
 	import App from '$src/App.svelte';
 	import Navbar from '$components/Navbar/index.svelte';
 	import Footer from '$components/Footer/index.svelte';
-	import { navigating } from '$app/stores';
+	import { navigating, session } from '$app/stores';
 </script>
 
 <App>

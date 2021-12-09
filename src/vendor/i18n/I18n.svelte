@@ -14,7 +14,7 @@
 	import { page, session } from '$app/stores';
 	import { formatUrl } from './utils';
 
-	export let translations: Translations, url: string;
+	export let translations: Translations;
 
 	const handleChangeLocale = ({ payload: { locale } }: ActionWithPayload<ChangeLanguage>): void => {
 		const rootElement = document.documentElement;
@@ -26,7 +26,7 @@
 
 		if ((typeof match !== 'undefined' && match !== null) || path === '/') {
 			if (path.split('/').length === 2) newPath = path.replace(regex, `/${locale}`);
-			else newPath = path.replace(regex, `${locale}`);
+			else newPath = path.replace(regex, `/${locale}`);
 
 			if (path === '/') newPath = `/${locale}`;
 
@@ -75,7 +75,11 @@
 <svelte:head>
 	{#if Object.keys(translations).length > 0}
 		{#each Object.keys(translations) as lang}
-			<link rel="alternate" href={`${url}${formatUrl($page.path, lang)}`} hreflang={lang} />
+			<link
+				rel="alternate"
+				href={`https://${$page.host}${formatUrl($page.path, lang)}`}
+				hreflang={lang}
+			/>
 		{/each}
 	{/if}
 </svelte:head>

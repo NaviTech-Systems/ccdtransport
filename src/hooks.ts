@@ -10,7 +10,7 @@ export const handle = async ({ request, resolve }): Promise<() => any> => {
 	await start();
 
 	let lang = i18n.defaultLocale;
-	let path = request.path;
+	const path = request.path;
 
 	i18n.locales.forEach((locale) => {
 		const regex = new RegExp(`^/${locale}`);
@@ -18,13 +18,8 @@ export const handle = async ({ request, resolve }): Promise<() => any> => {
 
 		if (typeof match !== 'undefined' && match !== null) {
 			lang = locale;
-			console.log(path.split('/').length, "path.split('/').length");
-
-			if (path.split('/').length === 2) path = path.replace(regex, '/');
-			else path = path.replace(regex, '');
 		}
 	});
-	request.path = path;
 	request.locals.lang = lang;
 
 	const response = await resolve(request);

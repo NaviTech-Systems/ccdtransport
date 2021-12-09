@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+
 	import type { Data } from './types/SEO';
 
 	export let data: Data;
@@ -18,5 +20,5 @@
 	{#if data.keywords && data.keywords.length}
 		<meta name="keywords" content={data.keywords.join(', ')} />
 	{/if}
-	<link rel="canonical" href={data.url} />
+	<link rel="canonical" href={`https://${$page.host}${$page.path}`} />
 </svelte:head>

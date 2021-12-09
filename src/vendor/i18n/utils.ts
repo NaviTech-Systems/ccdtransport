@@ -1,4 +1,4 @@
-import { derived } from 'svelte/store';
+import { derived, get } from 'svelte/store';
 import { languages } from './state';
 
 const createUrlFormatter = (languages) => (url: string) => {
@@ -12,7 +12,10 @@ export const formatUrl = (url: string, locale = null): string => {
 	if (url === '/') {
 		return `/${locale}`;
 	}
-	return `/${locale}${url}`;
+
+	const parsed = url.replace(`/${get(languages).locale}`, `/${locale}`);
+
+	return parsed;
 };
 
 export const composeUrl = derived([languages], ([$languages]) => {
