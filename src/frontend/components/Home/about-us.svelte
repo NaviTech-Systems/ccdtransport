@@ -9,7 +9,7 @@
 	<div class="text" slot="text">
 		<h3>{$t('aboutus.title')}</h3>
 		<p>
-			{$t('aboutus.description')}
+			{@html $t('aboutus.description')}
 		</p>
 	</div>
 </Section>

@@ -11,7 +11,7 @@
 		name: 'CDD Euro Services - ' + $t('houses.title'),
 		description: `${$t('houses.description')}`.substr(0, 150) + '...',
 		url: `https://${$page.host}${$page.path}`,
-		image: '',
+		image: `https://${$page.host}/links/houses.png`,
 		title: 'CDD Euro Services  - ' + $t('houses.title'),
 		keywords: $t('houses.keywords')
 	}}
