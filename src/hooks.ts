@@ -20,6 +20,7 @@ export const handle = async ({ request, resolve }): Promise<() => any> => {
 			lang = locale;
 		}
 	});
+
 	request.locals.lang = lang;
 
 	const response = await resolve(request);
