@@ -18,6 +18,19 @@
 				"mobile",
 				"marfa",
 				"industriala",
+				"transport case mobile",
+				"transport caravane",
+				"transport marfa industriala",
+				"transport excavatoare",
+				"transport dumper",
+				"transport utilaje agricole",
+				"transport colete",
+				"transport tractoare",
+				"transport agabaritic",
+				"transport utilaje",
+				"transport marfa paletizata",
+				"transport rulota",
+				"transport paleti",
 				"utilaje",
 				"romania",
 				"anglia",
@@ -26,11 +39,11 @@
 		},
 		"category": {
 			"houses-title": "Case Mobile",
-			"houses-description": "Suntem specializati in furnizarea de servicii de transport pentru case mobile din Europa, in special din Marea Britanie in Romania, dar eforturile noastre nu se opresc aic...",
+			"houses-description": "Profesionisti in furnizarea serviciilor de transport pentru case mobile, oferim deplasări in special din Marea Britanie (Anglia) și din Europa catre România.",
 			"cargo-title": "Marfa Paletizata",
 			"cargo-description": "Noi, la CCD EuroServices, vă oferim servicii de transport de mărfuri pe paleți din Marea Britanie în România și invers...",
 			"machinary-title": "Utilaje",
-			"machinary-description": "Compania noastră vă poate asigura transportul pentru utilajele dvs. de construcții sau agricole din Europa, în special Marea Britanie...",
+			"machinary-description": "Asiguram transport utilaje agricole sau de construcții din Marea Britanie (Anglia) și Europa in România.",
 			"learnMore": "Afla mai multe"
 		},
 		"aboutus": {
@@ -39,11 +52,16 @@
 		},
 		"houses": {
 			"title": "Case Mobile",
-			"description": "Suntem specializati in furnizarea de servicii de transport pentru case mobile din Europa, in special din Marea Britanie in Romania, dar eforturile noastre nu se opresc aici. La cerere oferim si declaratia vamala si toate celelalte documente pentru a va aduce casa pe roti in siguranta, in România. Putem transporta case mobile cu dimensiunile maxime de: 11 metri lungime, 3.20 metri latime, respectiv 10ft",
+			"description": "Casele mobile reprezinta spatiul ideal in care va puteti petrece un concediu linistit, intr-o zona retrasa, avand toate utilitatiile necesare pentru un comfort maxim.<br> Specializați in furnizarea serviciilor de transport, oferim deplasări pentru case mobile din Marea Britanie (Anglia) și din Europa in România. La cerere, va putem oferi, declarațiile vamale și toate celelalte documente necesare transportului. Dimensiunile maxime ale căsuțelor mobile pe care le putem transporta sunt: 11 metri lungime, 3.2 metri lățime, respectiv 10 ft. De asemenea, firma noastra se ocupa si cu achizitionarea caselor mobile la comanda in functie de preferintele dumneavoastra.",
 			"keywords": [
 				"transport",
 				"case",
 				"mobile",
+				"transport case mobile",
+				"transport caravane",
+				"transport agabaritic",
+				"transport rulota",
+				"case mobile",
 				"romania",
 				"anglia",
 				"uk"
@@ -51,7 +69,7 @@
 		},
 		"machinary": {
 			"title": "Utilaje",
-			"description": "Compania noastră vă poate asigura transportul pentru utilajele dvs. de construcții sau agricole din Europa, în special Marea Britanie. La cerere, vă oferim și declarația vamală și toate celelalte documente pentru a vă aduce utilajele în siguranță în România. Avem echipamentul care ar trebui să se potrivească nevoilor dumneavoastră. Cu multă experiență în deplasarea tractoarelor, excavatoarelor, basculantelor, astfel încât să vă puteți baza pe noi pentru a vă muta echipamentul în siguranță.La nivel agabaritic putem transporta utilaje cu latimea de 3,19 metri, inaltime 3,30 metri si lungime maxima de 12 metri.",
+			"description": "Compania noastră vă poate asigura transport din Marea Britanie (Anglia) și Europa in România, pentru utilajele dumneavoastră agricole sau de construcții. La cerere, oferim declarațiile vamale și toate celelalte documente pentru transportul acestora in siguranța. Echipamentul nostru este unul profesional și potrivit nevoilor dumneavoastră. Cu multă experiența in deplasarea tractoarelor, excavatoarelor, basculantelor, va puteți baza pe noi pentru a va muta echipamentul in siguranța. La nivel agabaritic, transportam utilaje cu lățimea maximă de 3.19 metri, înălțimea maxima de 3.30 metri și lungimea maxima de 12 metri.",
 			"slide-1-title": "Tocator Jaguar 870 class",
 			"slide-2-title": "Dumper 10 tone/tractor CASE",
 			"slide-3-title": "Tocator Jaguar 870 class",
@@ -59,6 +77,14 @@
 				"transport",
 				"marfa",
 				"industriala",
+				"transport marfa industriala",
+				"transport excavatoare",
+				"transport dumper",
+				"transport utilaje agricole",
+				"transport colete",
+				"transport tractoare",
+				"transport agabaritic",
+				"transport utilaje",
 				"utilaje",
 				"romania",
 				"anglia",
@@ -67,13 +93,17 @@
 		},
 		"cargo": {
 			"title": "Marfa Paletizata",
-			"description": "Noi, la CCD EuroServices, vă oferim servicii de transport a marfii paletate din Marea Britanie în România și invers. Serviciile noastre sunt flexibile și ne vom asigura că primiți prompt bunurile dumneavoastră,cu ani de experienta in industria transporturilor. Am lucrat cu cei mai importanți transportatori din Europa, cum ar fi Schenker, Dachser și mulți alții. Indiferent dacă este vorba de un camion plin, sau de un întreg container sau o parte dintr-un container pe care trebuie să îl transportați – noi avem grijă de el.",
+			"description": "CCD EuroServices va oferă servicii de transport a mărfii paletizate din Marea Britanie (Anglia) in România și vice-versa. Operațiunile noastre sunt flexibile și ne vom asigura ca primiți prompt bunurile dumneavoastră. Cu ani de experiența in aceasta industrie, am colaborat cu cei mai importanți transportatori din Europa, precum: Schenker, Dachser și mulți alții. Indiferent dacă este vorba despre un camion complet, container (sau o parte) pe care doriți sa îl transportați, noi avem grija de el.",
 			"keywords": [
 				"transport",
 				"peleti",
+				"transport marfa paletizata",
+				"transport agabaritic",
+				"transport paleti",
 				"romania",
 				"anglia",
-				"uk"
+				"uk",
+				"marea britanie"
 			]
 		},
 		"offer": {

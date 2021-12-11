@@ -5,7 +5,7 @@
 
 <div class="description">
 	<h1>{title}</h1>
-	{description}
+	{@html description}
 </div>
 
 <style lang="scss">
