@@ -14,29 +14,6 @@ export default {
 		// specifying a different adapter
 
 		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte',
-		adapter: adapter(),
-
-		vite: {
-			resolve: {
-				alias: {
-					$components: resolve('src/frontend/components'),
-					$actions: resolve('./src/frontend/actions'),
-					$state: resolve('./src/frontend/state'),
-					$utils: resolve('./src/utils'),
-					$constants: resolve('./src/frontend/constants'),
-					$reducers: resolve('./src/frontend/reducers'),
-					$interceptors: resolve('./src/frontend/interceptors'),
-					$vendor: resolve('./src/vendor'),
-					$frontend: resolve('./src/frontend'),
-					$backend: resolve('./src/backend'),
-					$modules: resolve('./src/backend/modules'),
-					$controllers: resolve('./src/backend/controllers'),
-					$models: resolve('./src/backend/models'),
-					$src: resolve('./src')
-				}
-			}
-		},
-		ssr: true
+		adapter: adapter()
 	}
 };

@@ -9,7 +9,7 @@
 
 <item class:effect class:logo class:link class:selected on:click bind:this={el}>
 	{#if link && to}
-		<a href={to} alt="link" rel="external">
+		<a href={to} alt="link">
 			<slot />
 		</a>
 	{:else}

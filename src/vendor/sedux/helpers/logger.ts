@@ -1,7 +1,6 @@
 import { get } from 'svelte/store';
 import { mainStore } from '../store';
 import type { Calls } from '../types/calls';
-import { browser } from '$app/env';
 
 let devTools = null;
 /**

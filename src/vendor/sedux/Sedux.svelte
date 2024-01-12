@@ -3,7 +3,7 @@
 	import { callsStore, queue } from './store';
 	import { reducerCatcher, interceptorCatcher, listenerCatcher, updateQueue } from './dispatcher';
 	import { actionsLogger, initDevTools } from './helpers/logger';
-	import { dev } from '$app/env';
+	import { dev } from '$app/environment';
 	import type { Unsubscriber } from 'svelte/store';
 
 	let unsubscribeCalls: Unsubscriber | null = null;

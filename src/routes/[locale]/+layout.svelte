@@ -15,14 +15,11 @@
 	import App from '$src/App.svelte';
 	import Navbar from '$components/Navbar/index.svelte';
 	import Footer from '$components/Footer/index.svelte';
-	import { navigating } from '$app/stores';
 </script>
 
 <App>
 	<Navbar />
-	{#key $navigating}
-		<slot />
-	{/key}
+	<slot />
 	<Footer />
 </App>
 

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { beforeNavigate } from '$app/navigation';
 	import MediaQuery from '../utils/MediaQuery.svelte';
 	import Group from './Group.svelte';
 	import Item from './Item.svelte';
@@ -21,6 +22,10 @@
 			handleToggleOpen();
 		}
 	};
+
+	beforeNavigate(() => {
+		opened = false;
+	});
 </script>
 
 <svelte:window on:click={handleWindowClick} />
@@ -35,7 +40,7 @@
 					{#if matches === true}
 						<slot name="logo" />
 						{#if opened}
-							<div class="dropdown" bind:this={dropdownEl} transition:slide>
+							<div class="dropdown" bind:this={dropdownEl} transition:slide|local>
 								<slot name="mobile" />
 							</div>
 						{/if}

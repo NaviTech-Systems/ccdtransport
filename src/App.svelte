@@ -8,11 +8,7 @@
 
 <Sedux>
 	<I18n {translations}>
-		{#if !$navigating}
-			<slot />
-		{:else}
-			<PageLoader />
-		{/if}
+		<slot />
 	</I18n>
 </Sedux>
 

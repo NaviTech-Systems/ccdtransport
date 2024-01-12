@@ -11,7 +11,7 @@
 	import type { Languages } from './types/state';
 	import type { ChangeLanguage } from './types/actions';
 	import type { ActionWithPayload } from '$vendor/sedux/types/slicer';
-	import { page, session } from '$app/stores';
+	import { page } from '$app/stores';
 	import { formatUrl } from './utils';
 
 	export let translations: Translations;
@@ -25,8 +25,8 @@
 		let newPath = path;
 
 		if ((typeof match !== 'undefined' && match !== null) || path === '/') {
-			if (path.split('/').length === 2) newPath = path.replace(regex, `/${locale}`);
-			else newPath = path.replace(regex, `/${locale}`);
+			if (path.split('/').length === 2) newPath = path?.replace(regex, `/${locale}`);
+			else newPath = path?.replace(regex, `/${locale}`);
 
 			if (path === '/') newPath = `/${locale}`;
 
@@ -36,7 +36,7 @@
 
 	const slicer = createSlicer(null, i18nReducer, 'i18n', languages);
 
-	slicer.dispatch(() => loadLanguages(translations, $session.lang || 'en'));
+	slicer.dispatch(() => loadLanguages(translations, $page.params.locale || 'en'));
 
 	onMount(() => {
 		if (typeof window !== 'undefined') {
@@ -58,8 +58,8 @@
 				if (value.locale) localStorage.setItem('i18n', value.locale);
 			});
 
-			if (localStorage.getItem('i18n') || $session.lang) {
-				let lang = localStorage.getItem('i18n') || $session.lang;
+			if (localStorage.getItem('i18n') || $page.params.locale) {
+				let lang = localStorage.getItem('i18n') || $page.params.locale;
 				slicer.dispatch(() => loadLanguages(translations, lang));
 				rootElement.setAttribute(`lang`, `${lang}`);
 			} else {
@@ -77,7 +77,7 @@
 		{#each Object.keys(translations) as lang}
 			<link
 				rel="alternate"
-				href={`https://${$page.host}${formatUrl($page.path, lang)}`}
+				href={`https://${$page.url.hostname}${formatUrl($page.url.pathname, lang)}`}
 				hreflang={lang}
 			/>
 		{/each}

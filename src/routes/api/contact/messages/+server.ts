@@ -1,5 +1,5 @@
 import { createContact, getContacts } from '$backend/controllers/contact';
 
-export const get = getContacts;
+export const GET = getContacts;
 
-export const put = createContact;
+export const PUT = createContact;
