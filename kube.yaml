@@ -40,12 +40,12 @@ spec:
         - env:
             - name: CCD_MAIL_USER
               valueFrom:
-                secretMapKeyRef:
+                secretKeyRef:
                   key: CCD_MAIL_USER
                   name: ccd-prod-secret
             - name: CCD_MAIL_PASS
               valueFrom:
-                secretMapKeyRef:
+                secretKeyRef:
                   key: CCD_MAIL_PASS
                   name: ccd-prod-secret
           image: containers.navitech.systems/navitech-systems/ccd-euroservices/ccdeuroservices:master
