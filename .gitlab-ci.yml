@@ -71,8 +71,6 @@ ccd-build-prod-image:
   needs: []
   rules:
     - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == "master"'
-      changes:
-        - ./*
       when: always
     - when: never
       allow_failure: false
@@ -85,8 +83,6 @@ ccd-prod-update:
   stage: update
   rules:
     - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == "master"'
-      changes:
-        - ./*
       when: always
     - when: never
       allow_failure: false
