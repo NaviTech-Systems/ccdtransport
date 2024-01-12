@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: ccd-prod-config
+  name: ccd-prod-secret
   namespace: ccd-prod
 type: Opaque
 stringData:
@@ -38,16 +38,16 @@ spec:
     spec:
       containers:
         - env:
-            - name: DEBUG
+            - name: CCD_MAIL_USER
               valueFrom:
-                configMapKeyRef:
-                  key: DEBUG
-                  name: ccd-prod-config
-            - name: API_IP
+                secretMapKeyRef:
+                  key: CCD_MAIL_USER
+                  name: ccd-prod-secret
+            - name: CCD_MAIL_PASS
               valueFrom:
-                configMapKeyRef:
-                  key: API_IP
-                  name: ccd-prod-config
+                secretMapKeyRef:
+                  key: CCD_MAIL_PASS
+                  name: ccd-prod-secret
           image: containers.navitech.systems/navitech-systems/ccd-euroservices/ccdeuroservices:master
           imagePullPolicy: Always
           name: ccd-frontend
