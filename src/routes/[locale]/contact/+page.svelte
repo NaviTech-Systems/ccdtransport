@@ -9,7 +9,7 @@
 	data={{
 		name: 'CDD Euro Services - Contact',
 		description: 'lorem ipsum',
-		url: `https://${$page.host}${$page.path}`,
+		url: `https://${$page.url.host}${$page.url.pathname}`,
 		image: '',
 		title: 'CDD Euro Services - Contact'
 	}}

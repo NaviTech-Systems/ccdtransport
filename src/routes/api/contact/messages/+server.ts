@@ -1,5 +1,3 @@
-import { createContact, getContacts } from '$backend/controllers/contact';
-
-export const GET = getContacts;
+import { createContact } from '$backend/controllers/contact';
 
 export const PUT = createContact;

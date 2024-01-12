@@ -10,8 +10,8 @@
 	data={{
 		name: `CDD Euro Services - ${$t('homepage.subtitle')}`,
 		description: `${$t('aboutus.description')}`.substr(0, 150) + '...',
-		url: `https://${$page.host}${$page.path}`,
-		image: `https://${$page.host}/links/home.png`,
+		url: `https://${$page.url.host}${$page.url.pathname}`,
+		image: `https://${$page.url.host}/links/home.png`,
 		title: `CDD Euro Services - ${$t('homepage.subtitle')}`,
 		keywords: $t('homepage.keywords')
 	}}

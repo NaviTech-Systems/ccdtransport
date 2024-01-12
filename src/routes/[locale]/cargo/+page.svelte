@@ -10,8 +10,8 @@
 	data={{
 		name: 'CDD Euro Services - ' + $t('cargo.title'),
 		description: `${$t('cargo.description')}`.substr(0, 150) + '...',
-		url: `https://${$page.host}${$page.path}`,
-		image: `https://${$page.host}/links/cargo.png`,
+		url: `https://${$page.url.host}${$page.url.pathname}`,
+		image: `https://${$page.url.host}/links/cargo.png`,
 		title: 'CDD Euro Services - ' + $t('cargo.title'),
 		keywords: $t('cargo.keywords')
 	}}

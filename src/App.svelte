@@ -1,9 +1,7 @@
 <script lang="ts">
 	import { I18n } from '$vendor/i18n';
-	import PageLoader from '$vendor/mase/Spinners/PageLoader.svelte';
 	import Sedux from '$vendor/sedux/Sedux.svelte';
 	import translations from './translations.json';
-	import { navigating } from '$app/stores';
 </script>
 
 <Sedux>

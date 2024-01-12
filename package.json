@@ -49,8 +49,6 @@
 		"@sveltejs/adapter-node": "1.0.0",
 		"esbuild": "^0.12.29",
 		"nodemailer": "^6.7.2",
-		"pg": "^8.7.1",
-		"prisma": "3.6.0",
 		"sass": "^1.44.0",
 		"workbox-cli": "^6.4.2"
 	}

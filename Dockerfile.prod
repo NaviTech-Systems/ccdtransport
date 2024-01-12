@@ -1,15 +1,27 @@
-FROM node:14-alpine
-RUN apk add git
+FROM node:18 as BUILD
+
+RUN mkdir /app
 WORKDIR /app
-ENV PATH /app/node_modules/.bin:$PATH
-COPY package.json ./
-# COPY package-lock.json ./
-COPY . ./
-RUN npm install
-RUN ls
-RUN npm run build
+
+COPY . /app
+COPY ./package.json /app/package.json
+
+WORKDIR /app
+
+RUN npm i -g pnpm
+RUN pnpm -r i
+
+RUN pnpm run build
+RUN sed -i '/\"devDependencies\"/,/}/ d; /^$/d' package.json
+RUN cp package.json build/package.json
+
+FROM node:18
+
+COPY --from=build /app/build /opt/build
+COPY --from=build /app/package.json /opt/build/package.json
+
+WORKDIR /opt/build
 
 EXPOSE ${PORT}
-EXPOSE 3001
 
-CMD npm run start
+CMD node index.js

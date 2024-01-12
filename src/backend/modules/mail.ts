@@ -60,25 +60,19 @@ export const sendMail = async (
 			host: 'smtp.gmail.com',
 			port: 465,
 			auth: {
-				user: import.meta.env.VITE_PUBLIC_MAIL_USER,
-				pass: import.meta.env.VITE_PUBLIC_MAIL_PASS
+				user: import.meta.env.CCD_MAIL_USER,
+				pass: import.meta.env.CCD_MAIL_PASS
 			}
 		});
 	}
 
-	try {
-		const info = await transporter.sendMail({
-			from: `"Notificare CCD <${import.meta.env.VITE_PUBLIC_MAIL_USER}>`,
-			to: email,
-			subject,
-			html: text
-		});
-		console.log(info);
+	const info = await transporter.sendMail({
+		from: `"Notificare CCD <${import.meta.env.CCD_MAIL_USER}>`,
+		to: email,
+		subject,
+		html: text
+	});
+	console.log(info);
 
-		return info;
-	} catch (error) {
-		console.log(error);
-
-		return error;
-	}
+	return info;
 };

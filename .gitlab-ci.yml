@@ -1,0 +1,98 @@
+variables:
+  DOCKER_BUILDKIT: 1
+  RULES_CHANGES_PATH: '**/*'
+
+.ssh_cloning:
+  variables:
+    GIT_STRATEGY: none
+    KUBE_CONTEXT: default # The name to use for the new context
+    AGENT_ID: 7 # replace with your agent's numeric ID
+    K8S_PROXY_URL: https://git.navitech.systems/-/kubernetes-agent/k8s-proxy/
+  before_script:
+    - |
+      if [ ! -d "${CI_PROJECT_DIR}/.git" ]
+      then
+          mkdir -p "${CI_PROJECT_DIR}"
+          cd "${CI_PROJECT_DIR}"
+          git init
+          git remote add origin git@git-ssh.navitech.systems:${CI_PROJECT_PATH}.git
+      fi
+    - cd "${CI_PROJECT_DIR}"
+    - git fetch origin
+    - |
+      if [ "${CI_JOB_STAGE}" = "deploy" ]
+      then
+          git reset HEAD --hard
+      fi
+    - git checkout "${CI_COMMIT_SHA}"
+    - git reset --hard HEAD
+    - git submodule update --init --recursive
+    - |
+      if [ "${CI_JOB_STAGE}" != "deploy" ]
+      then
+          git clean -ffdx
+      fi
+
+    - echo ${CI_REGISTRY_PASSWORD} | docker login -u ${CI_REGISTRY_USER} --password-stdin ${CI_REGISTRY}
+    - kubectl config set-credentials agent:$AGENT_ID --token="ci:${AGENT_ID}:${CI_JOB_TOKEN}"
+    - kubectl config set-cluster gitlab --server="${K8S_PROXY_URL}"
+    - kubectl config set-context "$KUBE_CONTEXT" --cluster=gitlab --user="agent:${AGENT_ID}"
+    - kubectl config use-context "$KUBE_CONTEXT"
+
+stages:
+  - build
+  - deploy
+  - test
+  - update
+
+.base-rules:
+  extends: .ssh_cloning
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      changes:
+        - $RULES_CHANGES_PATH
+      when: always
+    - if: '$CI_PIPELINE_SOURCE == "push"'
+      changes:
+        - $RULES_CHANGES_PATH
+      when: always
+    - if: $CI_COMMIT_TAG
+      when: always
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      changes:
+        - $RULES_CHANGES_PATH
+      when: always
+    - when: always
+      allow_failure: true
+
+ccd-build-prod-image:
+  extends: .base-rules
+  stage: build
+  needs: []
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == "master"'
+      changes:
+        - ./*
+      when: always
+    - when: never
+      allow_failure: false
+  script:
+    - ./build.sh -v $CI_REGISTRY/navitech-systems/ccd-euroservices/ccdeuroservices:$CI_COMMIT_BRANCH
+    - docker push $CI_REGISTRY/navitech-systems/ccd-euroservices/ccdeuroservices:$CI_COMMIT_BRANCH
+
+ccd-prod-update:
+  extends: .base-rules
+  stage: update
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == "master"'
+      changes:
+        - ./*
+      when: always
+    - when: never
+      allow_failure: false
+  script:
+    - kubectl apply -f $CI_PROJECT_DIR/kube.yaml --insecure-skip-tls-verify=true
+    - kubectl rollout restart -f $CI_PROJECT_DIR/kube.yaml --insecure-skip-tls-verify=true || true
+  environment:
+    name: prod
+    url: https://ccdeuroservices.ro
