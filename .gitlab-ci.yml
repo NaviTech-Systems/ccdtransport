@@ -75,7 +75,7 @@ ccd-build-prod-image:
     - when: never
       allow_failure: false
   script:
-    - ./build.sh -e prod -v $CI_REGISTRY/navitech-systems/ccd-euroservices/ccdeuroservices:$CI_COMMIT_BRANCH
+    - ./build.sh  -v $CI_REGISTRY/navitech-systems/ccd-euroservices/ccdeuroservices:$CI_COMMIT_BRANCH
     - docker push $CI_REGISTRY/navitech-systems/ccd-euroservices/ccdeuroservices:$CI_COMMIT_BRANCH
 
 ccd-prod-update:

@@ -25,7 +25,7 @@ fi
 printf "Building ccd with the $build mode...\n"
 
 if [[ ${version} ]]; then
-  docker build ../../ -f Dockerfile.$env -t $version
+  docker build ../../ -f Dockerfile.prod -t $version
 else
-  docker build ../../ -f Dockerfile.$env -t ccdeuroservices:$env
+  docker build ../../ -f Dockerfile.prod -t ccdeuroservices:$env
 fi
